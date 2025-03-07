@@ -1,8 +1,8 @@
 # MovieTicketsReservation
-CSS124L - Event-Driven/GUI Programming
-2nd Term, A.Y 2024-2025
+CSS124L - Event-Driven/GUI Programming <br />
+2nd Term, A.Y 2024-2025 <br />
 
-Members:
+Members: <br />
 
 Liam Erros C. Gotuato <br />
 Ysa Andre A. Mendoza <br />
