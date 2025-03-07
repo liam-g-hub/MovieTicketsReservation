@@ -4,8 +4,8 @@ CSS124L - Event-Driven/GUI Programming
 
 Members:
 
-Liam Erros C. Gotuato
-Ysa Andre A. Mendoza
-Ron David D. Convento
-Samantha Neiya D. Rodil
-Julianna Chanel C. Boado
+Liam Erros C. Gotuato <br />
+Ysa Andre A. Mendoza <br />
+Ron David D. Convento <br />
+Samantha Neiya D. Rodil <br />
+Julianna Chanel C. Boado <br />
