@@ -37,26 +37,24 @@ public class HomePage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(950, 700));
 
         North_HomePage.setBackground(new java.awt.Color(176, 52, 60));
 
         HomePageBtn1.setBackground(new java.awt.Color(176, 52, 60));
-        HomePageBtn1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        HomePageBtn1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         HomePageBtn1.setForeground(new java.awt.Color(255, 255, 255));
         HomePageBtn1.setText("HOME");
-        HomePageBtn1.setBorder(null);
 
         MoviesPageBtn1.setBackground(new java.awt.Color(176, 52, 60));
-        MoviesPageBtn1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        MoviesPageBtn1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         MoviesPageBtn1.setForeground(new java.awt.Color(255, 255, 255));
         MoviesPageBtn1.setText("MOVIES");
-        MoviesPageBtn1.setBorder(null);
 
         ResPageBtn1.setBackground(new java.awt.Color(176, 52, 60));
-        ResPageBtn1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        ResPageBtn1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         ResPageBtn1.setForeground(new java.awt.Color(255, 255, 255));
         ResPageBtn1.setText("RESERVATION");
-        ResPageBtn1.setBorder(null);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Logo.png"))); // NOI18N
 
@@ -67,43 +65,44 @@ public class HomePage extends javax.swing.JFrame {
             .addGroup(North_HomePageLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 600, Short.MAX_VALUE)
-                .addComponent(HomePageBtn1)
-                .addGap(64, 64, 64)
-                .addComponent(MoviesPageBtn1)
-                .addGap(64, 64, 64)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 236, Short.MAX_VALUE)
+                .addComponent(HomePageBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(MoviesPageBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(ResPageBtn1)
                 .addGap(30, 30, 30))
         );
         North_HomePageLayout.setVerticalGroup(
             North_HomePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(North_HomePageLayout.createSequentialGroup()
+                .addGap(0, 24, Short.MAX_VALUE)
                 .addGroup(North_HomePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(North_HomePageLayout.createSequentialGroup()
-                        .addGap(72, 72, 72)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, North_HomePageLayout.createSequentialGroup()
                         .addGroup(North_HomePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ResPageBtn1)
                             .addComponent(MoviesPageBtn1)
-                            .addComponent(HomePageBtn1)))
-                    .addGroup(North_HomePageLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel3)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                            .addComponent(HomePageBtn1))
+                        .addGap(49, 49, 49))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, North_HomePageLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addContainerGap())))
         );
 
         getContentPane().add(North_HomePage, java.awt.BorderLayout.NORTH);
 
         Center_HomePage.setBackground(new java.awt.Color(0, 0, 0));
+        Center_HomePage.setPreferredSize(new java.awt.Dimension(900, 570));
         Center_HomePage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 65)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Popcorns Ready, Are You?");
-        Center_HomePage.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 990, -1));
+        Center_HomePage.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 850, -1));
 
         jButton1.setBackground(new java.awt.Color(176, 52, 60));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Reserve Your Seat!");
         jButton1.setBorder(null);
@@ -113,10 +112,10 @@ public class HomePage extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        Center_HomePage.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, 250, 40));
+        Center_HomePage.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 250, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/HomePage.png"))); // NOI18N
-        Center_HomePage.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1180, -1));
+        Center_HomePage.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         getContentPane().add(Center_HomePage, java.awt.BorderLayout.CENTER);
 
