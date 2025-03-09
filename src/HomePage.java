@@ -37,7 +37,6 @@ public class HomePage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         North_HomePage.setBackground(new java.awt.Color(176, 52, 60));
 
@@ -92,7 +91,7 @@ public class HomePage extends javax.swing.JFrame {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        getContentPane().add(North_HomePage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, -1));
+        getContentPane().add(North_HomePage, java.awt.BorderLayout.NORTH);
 
         Center_HomePage.setBackground(new java.awt.Color(0, 0, 0));
         Center_HomePage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -119,7 +118,7 @@ public class HomePage extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/HomePage.png"))); // NOI18N
         Center_HomePage.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1180, -1));
 
-        getContentPane().add(Center_HomePage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 1200, 566));
+        getContentPane().add(Center_HomePage, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
