@@ -5,7 +5,7 @@
 
 /**
  *
- * @author Julianna Boado
+ * @author Julianna Boado test
  */
 public class HomePage extends javax.swing.JFrame {
 
@@ -108,6 +108,11 @@ public class HomePage extends javax.swing.JFrame {
         jButton1.setText("Reserve Your Seat!");
         jButton1.setBorder(null);
         jButton1.setOpaque(true);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         Center_HomePage.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, 250, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/HomePage.png"))); // NOI18N
@@ -117,6 +122,12 @@ public class HomePage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        MoviesPage Movies = new MoviesPage();
+        Movies.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

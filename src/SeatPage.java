@@ -609,12 +609,22 @@ public class SeatPage extends javax.swing.JFrame {
         CancelBtn.setForeground(new java.awt.Color(176, 52, 60));
         CancelBtn.setText("CANCEL");
         CancelBtn.setOpaque(true);
+        CancelBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CancelBtnActionPerformed(evt);
+            }
+        });
 
         ConfirmBtn.setBackground(new java.awt.Color(248, 196, 116));
         ConfirmBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         ConfirmBtn.setForeground(new java.awt.Color(176, 52, 60));
         ConfirmBtn.setText("CONFIRM");
         ConfirmBtn.setOpaque(true);
+        ConfirmBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConfirmBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout South_SeatPageLayout = new javax.swing.GroupLayout(South_SeatPage);
         South_SeatPage.setLayout(South_SeatPageLayout);
@@ -641,6 +651,16 @@ public class SeatPage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ConfirmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ConfirmBtnActionPerformed
+
+    private void CancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelBtnActionPerformed
+        ReservationPage Reservation = new ReservationPage();
+        Reservation.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_CancelBtnActionPerformed
 
     /**
      * @param args the command line arguments
