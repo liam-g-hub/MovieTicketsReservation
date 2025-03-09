@@ -306,12 +306,12 @@ public class MoviesPage extends javax.swing.JFrame {
         Home24.setBackground(new java.awt.Color(255, 255, 255));
         Home24.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         Home24.setForeground(new java.awt.Color(153, 153, 153));
-        Home24.setText("10:00AM 12:30PM ");
+        Home24.setText("3:00 PM 6:00 PM");
 
         Home25.setBackground(new java.awt.Color(255, 255, 255));
         Home25.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         Home25.setForeground(new java.awt.Color(153, 153, 153));
-        Home25.setText("10:00AM 12:30PM ");
+        Home25.setText("3:00 PM 6:00 PM");
 
         jLabelFlowPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/flow.jpg"))); // NOI18N
 
@@ -432,7 +432,7 @@ public class MoviesPage extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonGorge)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Home15, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Home15))
                     .addComponent(jLabelTheGeorgePic)
                     .addGroup(CenterLayout.createSequentialGroup()
                         .addComponent(jLabelDeadThing1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -450,10 +450,10 @@ public class MoviesPage extends javax.swing.JFrame {
                         .addComponent(Home6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonFlow)
+                        .addGap(12, 12, 12)
+                        .addComponent(Home5, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Home5, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Home7, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Home7))
                     .addComponent(jLabelTheDeadThingPic)
                     .addComponent(jLabelFlowPic))
                 .addGap(72, 72, 72)
@@ -465,7 +465,7 @@ public class MoviesPage extends javax.swing.JFrame {
                         .addComponent(jLabelTheCompanion2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Home20)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButtonCompanion)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Home24, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -495,8 +495,8 @@ public class MoviesPage extends javax.swing.JFrame {
                         .addGap(37, 37, 37)
                         .addComponent(jButtonCompleteUnknown)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Home25, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                        .addComponent(Home25)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 

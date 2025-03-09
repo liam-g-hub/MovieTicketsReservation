@@ -37,6 +37,7 @@ public class ReservationPage extends javax.swing.JFrame {
         jButtonHome = new javax.swing.JButton();
         jButtonReservation = new javax.swing.JButton();
         jButtonMovies = new javax.swing.JButton();
+        HourSelectBtnGroup = new javax.swing.ButtonGroup();
         North = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
         jButtonHome1 = new javax.swing.JButton();
@@ -44,11 +45,10 @@ public class ReservationPage extends javax.swing.JFrame {
         jButtonReservation1 = new javax.swing.JButton();
         Center = new javax.swing.JPanel();
         jLabelTitleofMovie = new javax.swing.JLabel();
-        choiceDate = new java.awt.Choice();
-        jToggleButtonTime1 = new javax.swing.JToggleButton();
-        jToggleButtonTime2 = new javax.swing.JToggleButton();
-        jToggleButtonTime3 = new javax.swing.JToggleButton();
-        jToggleButtonTime4 = new javax.swing.JToggleButton();
+        Time10Button = new javax.swing.JToggleButton();
+        Time12Button = new javax.swing.JToggleButton();
+        Time3Button = new javax.swing.JToggleButton();
+        Time6Button = new javax.swing.JToggleButton();
         panel3 = new java.awt.Panel();
         Home3 = new javax.swing.JLabel();
         Home6 = new javax.swing.JLabel();
@@ -67,19 +67,26 @@ public class ReservationPage extends javax.swing.JFrame {
         jLabelTicketQuantity = new javax.swing.JLabel();
         panel4 = new java.awt.Panel();
         Home5 = new javax.swing.JLabel();
-        jCheckBoxOgPopcorn = new javax.swing.JCheckBox();
-        jCheckBoxChxPopcorn = new javax.swing.JCheckBox();
-        jCheckBoxBBQPopcorn = new javax.swing.JCheckBox();
-        jCheckBoxNachos = new javax.swing.JCheckBox();
-        jCheckBoxSoda = new javax.swing.JCheckBox();
-        jCheckBoxWater = new javax.swing.JCheckBox();
         Home11 = new javax.swing.JLabel();
         jTextFieldSnackTotal = new javax.swing.JTextField();
+        OGPopSpinner = new javax.swing.JSpinner();
+        jLabel1 = new javax.swing.JLabel();
+        CheePopSpinner = new javax.swing.JSpinner();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        BBQPopSpinner = new javax.swing.JSpinner();
+        jLabel4 = new javax.swing.JLabel();
+        NachoSpinner = new javax.swing.JSpinner();
+        SodaSpinner = new javax.swing.JSpinner();
+        jLabel5 = new javax.swing.JLabel();
+        WaterSpinner = new javax.swing.JSpinner();
+        jLabel6 = new javax.swing.JLabel();
         panel6 = new java.awt.Panel();
         Home9 = new javax.swing.JLabel();
         jLabelTotalBill = new javax.swing.JLabel();
         jButtonCancel = new javax.swing.JButton();
         jButtonConfirm = new javax.swing.JButton();
+        MovieSelectComboBox = new javax.swing.JComboBox<>();
 
         jButtonHome.setBackground(new java.awt.Color(175, 52, 59));
         jButtonHome.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -154,7 +161,7 @@ public class ReservationPage extends javax.swing.JFrame {
             .addGroup(NorthLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(logo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
                 .addComponent(jButtonHome1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonMovies1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -187,47 +194,51 @@ public class ReservationPage extends javax.swing.JFrame {
         jLabelTitleofMovie.setForeground(new java.awt.Color(175, 52, 59));
         jLabelTitleofMovie.setText("TITLE OF MOVIE");
 
-        choiceDate.setBackground(new java.awt.Color(242, 198, 112));
-        choiceDate.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        choiceDate.setForeground(new java.awt.Color(255, 255, 255));
-
-        jToggleButtonTime1.setBackground(new java.awt.Color(242, 198, 112));
-        jToggleButtonTime1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jToggleButtonTime1.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButtonTime1.setText("10:00AM");
-        jToggleButtonTime1.addItemListener(new java.awt.event.ItemListener() {
+        Time10Button.setBackground(new java.awt.Color(242, 198, 112));
+        HourSelectBtnGroup.add(Time10Button);
+        Time10Button.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Time10Button.setForeground(new java.awt.Color(255, 255, 255));
+        Time10Button.setText("10:00AM");
+        Time10Button.setEnabled(false);
+        Time10Button.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jToggleButtonTime1ItemStateChanged(evt);
+                MovieSelectStateChanged(evt);
             }
         });
 
-        jToggleButtonTime2.setBackground(new java.awt.Color(242, 198, 112));
-        jToggleButtonTime2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jToggleButtonTime2.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButtonTime2.setText("12:30PM");
-        jToggleButtonTime2.addItemListener(new java.awt.event.ItemListener() {
+        Time12Button.setBackground(new java.awt.Color(242, 198, 112));
+        HourSelectBtnGroup.add(Time12Button);
+        Time12Button.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Time12Button.setForeground(new java.awt.Color(255, 255, 255));
+        Time12Button.setText("12:30PM");
+        Time12Button.setEnabled(false);
+        Time12Button.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jToggleButtonTime2ItemStateChanged(evt);
+                MovieSelectStateChanged(evt);
             }
         });
 
-        jToggleButtonTime3.setBackground(new java.awt.Color(242, 198, 112));
-        jToggleButtonTime3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jToggleButtonTime3.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButtonTime3.setText("3:00PM");
-        jToggleButtonTime3.addItemListener(new java.awt.event.ItemListener() {
+        Time3Button.setBackground(new java.awt.Color(242, 198, 112));
+        HourSelectBtnGroup.add(Time3Button);
+        Time3Button.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Time3Button.setForeground(new java.awt.Color(255, 255, 255));
+        Time3Button.setText("3:00PM");
+        Time3Button.setEnabled(false);
+        Time3Button.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jToggleButtonTime3ItemStateChanged(evt);
+                MovieSelectStateChanged(evt);
             }
         });
 
-        jToggleButtonTime4.setBackground(new java.awt.Color(242, 198, 112));
-        jToggleButtonTime4.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jToggleButtonTime4.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButtonTime4.setText("6:00PM");
-        jToggleButtonTime4.addItemListener(new java.awt.event.ItemListener() {
+        Time6Button.setBackground(new java.awt.Color(242, 198, 112));
+        HourSelectBtnGroup.add(Time6Button);
+        Time6Button.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Time6Button.setForeground(new java.awt.Color(255, 255, 255));
+        Time6Button.setText("6:00PM");
+        Time6Button.setEnabled(false);
+        Time6Button.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jToggleButtonTime4ItemStateChanged(evt);
+                MovieSelectStateChanged(evt);
             }
         });
 
@@ -416,60 +427,6 @@ public class ReservationPage extends javax.swing.JFrame {
         Home5.setForeground(new java.awt.Color(242, 198, 112));
         Home5.setText("Snack Bar");
 
-        jCheckBoxOgPopcorn.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jCheckBoxOgPopcorn.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBoxOgPopcorn.setText("Original Popcorn (P50.00)");
-        jCheckBoxOgPopcorn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxOgPopcornActionPerformed(evt);
-            }
-        });
-
-        jCheckBoxChxPopcorn.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jCheckBoxChxPopcorn.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBoxChxPopcorn.setText("Cheese Popcorn (P55.00)");
-        jCheckBoxChxPopcorn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxChxPopcornActionPerformed(evt);
-            }
-        });
-
-        jCheckBoxBBQPopcorn.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jCheckBoxBBQPopcorn.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBoxBBQPopcorn.setText("BBQ Popcorn (P55.00)");
-        jCheckBoxBBQPopcorn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxBBQPopcornActionPerformed(evt);
-            }
-        });
-
-        jCheckBoxNachos.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jCheckBoxNachos.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBoxNachos.setText("Nachos (P60.00)");
-        jCheckBoxNachos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxNachosActionPerformed(evt);
-            }
-        });
-
-        jCheckBoxSoda.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jCheckBoxSoda.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBoxSoda.setText("Soda (P30.00)");
-        jCheckBoxSoda.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxSodaActionPerformed(evt);
-            }
-        });
-
-        jCheckBoxWater.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jCheckBoxWater.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBoxWater.setText("Water (P25.00)");
-        jCheckBoxWater.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxWaterActionPerformed(evt);
-            }
-        });
-
         Home11.setBackground(new java.awt.Color(255, 255, 255));
         Home11.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         Home11.setForeground(new java.awt.Color(255, 255, 255));
@@ -477,7 +434,81 @@ public class ReservationPage extends javax.swing.JFrame {
 
         jTextFieldSnackTotal.setBackground(new java.awt.Color(242, 198, 112));
         jTextFieldSnackTotal.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jTextFieldSnackTotal.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldSnackTotal.setForeground(new java.awt.Color(175, 52, 59));
+        jTextFieldSnackTotal.setDisabledTextColor(new java.awt.Color(175, 52, 59));
+        jTextFieldSnackTotal.setEnabled(false);
+
+        OGPopSpinner.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        OGPopSpinner.setBorder(null);
+        OGPopSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                OrderChange(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Original Popcorn (P50.00)");
+
+        CheePopSpinner.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        CheePopSpinner.setBorder(null);
+        CheePopSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                OrderChange(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Cheese Popcorn (P55.00)");
+
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("BBQ Popcorn (P55.00)");
+
+        BBQPopSpinner.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        BBQPopSpinner.setBorder(null);
+        BBQPopSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                OrderChange(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Nachos (P60.00)");
+
+        NachoSpinner.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        NachoSpinner.setBorder(null);
+        NachoSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                OrderChange(evt);
+            }
+        });
+
+        SodaSpinner.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        SodaSpinner.setBorder(null);
+        SodaSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                OrderChange(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Soda (P30.00)");
+
+        WaterSpinner.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        WaterSpinner.setBorder(null);
+        WaterSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                OrderChange(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Water (P25.00)");
 
         javax.swing.GroupLayout panel4Layout = new javax.swing.GroupLayout(panel4);
         panel4.setLayout(panel4Layout);
@@ -488,23 +519,36 @@ public class ReservationPage extends javax.swing.JFrame {
                 .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Home5, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panel4Layout.createSequentialGroup()
-                        .addComponent(jCheckBoxOgPopcorn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBoxNachos))
-                    .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(panel4Layout.createSequentialGroup()
-                            .addComponent(jCheckBoxBBQPopcorn, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(43, 43, 43)
-                            .addComponent(jCheckBoxWater, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel4Layout.createSequentialGroup()
-                            .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(Home11, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jCheckBoxChxPopcorn))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jCheckBoxSoda, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
-                                .addComponent(jTextFieldSnackTotal)))))
+                        .addComponent(OGPopSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1))
+                    .addGroup(panel4Layout.createSequentialGroup()
+                        .addComponent(CheePopSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2))
+                    .addGroup(panel4Layout.createSequentialGroup()
+                        .addComponent(BBQPopSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3))
+                    .addGroup(panel4Layout.createSequentialGroup()
+                        .addComponent(NachoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4))
+                    .addGroup(panel4Layout.createSequentialGroup()
+                        .addComponent(SodaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5))
+                    .addGroup(panel4Layout.createSequentialGroup()
+                        .addComponent(WaterSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Home11, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextFieldSnackTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
         );
         panel4Layout.setVerticalGroup(
             panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -513,21 +557,33 @@ public class ReservationPage extends javax.swing.JFrame {
                 .addComponent(Home5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBoxOgPopcorn)
-                    .addComponent(jCheckBoxNachos))
-                .addGap(18, 18, 18)
+                    .addComponent(OGPopSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBoxChxPopcorn)
-                    .addComponent(jCheckBoxSoda))
-                .addGap(18, 18, 18)
+                    .addComponent(CheePopSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBoxBBQPopcorn)
-                    .addComponent(jCheckBoxWater))
-                .addGap(37, 37, 37)
+                    .addComponent(BBQPopSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NachoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(26, 26, 26)
+                .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SodaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(WaterSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(58, 58, 58)
                 .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Home11, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldSnackTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(17, 17, 17))
         );
 
         panel6.setBackground(new java.awt.Color(242, 198, 112));
@@ -583,6 +639,15 @@ public class ReservationPage extends javax.swing.JFrame {
             }
         });
 
+        MovieSelectComboBox.setBackground(new java.awt.Color(242, 198, 112));
+        MovieSelectComboBox.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        MovieSelectComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Select a Movie and Time", "Flow (March, 12)", "The Gorge (March, 12)", "The Dead Thing (March, 12)", "Moana Returns (March, 12)", "The Companion (March, 12)", "The Complete Unknown (March, 12)" }));
+        MovieSelectComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                MovieSelectStateChanged(evt);
+            }
+        });
+
         javax.swing.GroupLayout CenterLayout = new javax.swing.GroupLayout(Center);
         Center.setLayout(CenterLayout);
         CenterLayout.setHorizontalGroup(
@@ -592,23 +657,23 @@ public class ReservationPage extends javax.swing.JFrame {
                 .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabelTitleofMovie, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CenterLayout.createSequentialGroup()
-                        .addComponent(jToggleButtonTime1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jToggleButtonTime2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jToggleButtonTime3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Time10Button, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Time12Button, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jToggleButtonTime4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Time3Button, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Time6Button, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(panel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(choiceDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(MovieSelectComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(20, 20, 20)
                 .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, CenterLayout.createSequentialGroup()
                         .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
                         .addComponent(jButtonConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 10, Short.MAX_VALUE))
                     .addComponent(panel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(30, 30, 30))
@@ -618,28 +683,28 @@ public class ReservationPage extends javax.swing.JFrame {
             .addGroup(CenterLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jLabelTitleofMovie, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(CenterLayout.createSequentialGroup()
-                        .addComponent(choiceDate, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22)
-                        .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jToggleButtonTime1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButtonTime2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButtonTime3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButtonTime4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(22, 22, 22)
-                        .addComponent(panel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(panel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(25, 25, 25)
                 .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(CenterLayout.createSequentialGroup()
+                        .addComponent(MovieSelectComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Time10Button, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Time12Button, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Time3Button, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Time6Button, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(22, 22, 22)
+                        .addComponent(panel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(25, 25, 25)
+                        .addComponent(panel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addComponent(panel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(83, 83, 83)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(panel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(35, 35, 35))
         );
 
@@ -694,46 +759,6 @@ public class ReservationPage extends javax.swing.JFrame {
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonCancelActionPerformed
-
-    private void jCheckBoxWaterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxWaterActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBoxWaterActionPerformed
-
-    private void jCheckBoxSodaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxSodaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBoxSodaActionPerformed
-
-    private void jCheckBoxNachosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxNachosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBoxNachosActionPerformed
-
-    private void jCheckBoxBBQPopcornActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxBBQPopcornActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBoxBBQPopcornActionPerformed
-
-    private void jCheckBoxChxPopcornActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxChxPopcornActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBoxChxPopcornActionPerformed
-
-    private void jCheckBoxOgPopcornActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxOgPopcornActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBoxOgPopcornActionPerformed
-
-    private void jToggleButtonTime1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jToggleButtonTime1ItemStateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButtonTime1ItemStateChanged
-
-    private void jToggleButtonTime2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jToggleButtonTime2ItemStateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButtonTime2ItemStateChanged
-
-    private void jToggleButtonTime3ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jToggleButtonTime3ItemStateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButtonTime3ItemStateChanged
-
-    private void jToggleButtonTime4ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jToggleButtonTime4ItemStateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButtonTime4ItemStateChanged
     // NAME AND EMAIL TEXTFIELD
     private void jTextFieldNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldNameKeyPressed
         char keyChar = evt.getKeyChar();
@@ -809,6 +834,79 @@ public class ReservationPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonMoreActionPerformed
 
+    private void OrderChange(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_OrderChange
+        int Subtotal = (Integer) OGPopSpinner.getValue() * 50
+                + (Integer) CheePopSpinner.getValue() * 55
+                + (Integer) BBQPopSpinner.getValue() * 55
+                + (Integer) NachoSpinner.getValue() * 60
+                + (Integer) SodaSpinner.getValue() * 30 
+                + (Integer) WaterSpinner.getValue() * 25;
+        
+        //can also add the + ticket here and dupe, or append to outside method
+        
+        jTextFieldSnackTotal.setText("Php  " + Subtotal);
+    }//GEN-LAST:event_OrderChange
+
+    private void MovieSelectStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_MovieSelectStateChanged
+        Time10Button.setEnabled(false);
+        Time12Button.setEnabled(false);
+        Time3Button.setEnabled(false);
+        Time6Button.setEnabled(false);
+            //Initializes all to disabled (also to reset when on first option)
+        
+        switch (String.valueOf(MovieSelectComboBox.getSelectedItem())){ //converts object to string
+            case "Flow (March, 12)": 
+                Time10Button.setEnabled(true); //enables options
+                Time12Button.setEnabled(true);
+                Time3Button.setEnabled(true);
+                if (Time6Button.isSelected()) Time6Button.setSelected(false); //unselects if previously selected
+                Time6Button.setEnabled(false); //Disables 6 PM
+            case "The Gorge (March, 12)": 
+                Time10Button.setEnabled(true);
+                Time12Button.setEnabled(true);
+                if (Time3Button.isSelected()) Time3Button.setSelected(false);
+                if (Time6Button.isSelected()) Time6Button.setSelected(false);
+                Time3Button.setEnabled(false);
+                Time6Button.setEnabled(false);
+                break;
+            
+            case "The Dead Thing (March, 12)": 
+                Time10Button.setEnabled(true);
+                Time12Button.setEnabled(true);
+                if (Time3Button.isSelected()) Time3Button.setSelected(false);
+                if (Time6Button.isSelected()) Time6Button.setSelected(false);
+                Time3Button.setEnabled(false);
+                Time6Button.setEnabled(false);
+                break;
+                
+            case "Moana Returns (March, 12)": 
+                Time10Button.setEnabled(true);
+                Time12Button.setEnabled(true);
+                Time3Button.setEnabled(true);
+                if (Time6Button.isSelected()) Time6Button.setSelected(false);
+                Time6Button.setEnabled(false);
+                break;
+                
+            case "The Companion (March, 12)" : 
+                Time3Button.setEnabled(true);
+                Time6Button.setEnabled(true);
+                if (Time10Button.isSelected()) Time10Button.setSelected(false);
+                if (Time12Button.isSelected()) Time12Button.setSelected(false);
+                Time10Button.setEnabled(false);
+                Time12Button.setEnabled(false);
+                break;
+                
+            case "The Complete Unknown (March, 12)" : 
+                Time3Button.setEnabled(true);
+                Time6Button.setEnabled(true);
+                if (Time10Button.isSelected()) Time10Button.setSelected(false);
+                if (Time12Button.isSelected()) Time12Button.setSelected(false);
+                Time10Button.setEnabled(false);
+                Time12Button.setEnabled(false);
+                break;
+        }
+    }//GEN-LAST:event_MovieSelectStateChanged
+    
     /**
      * @param args the command line arguments
      */
@@ -848,7 +946,9 @@ public class ReservationPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JSpinner BBQPopSpinner;
     private javax.swing.JPanel Center;
+    private javax.swing.JSpinner CheePopSpinner;
     private javax.swing.JLabel Home10;
     private javax.swing.JLabel Home11;
     private javax.swing.JLabel Home13;
@@ -860,8 +960,17 @@ public class ReservationPage extends javax.swing.JFrame {
     private javax.swing.JLabel Home7;
     private javax.swing.JLabel Home8;
     private javax.swing.JLabel Home9;
+    private javax.swing.ButtonGroup HourSelectBtnGroup;
+    private javax.swing.JComboBox<String> MovieSelectComboBox;
+    private javax.swing.JSpinner NachoSpinner;
     private javax.swing.JPanel North;
-    private java.awt.Choice choiceDate;
+    private javax.swing.JSpinner OGPopSpinner;
+    private javax.swing.JSpinner SodaSpinner;
+    private javax.swing.JToggleButton Time10Button;
+    private javax.swing.JToggleButton Time12Button;
+    private javax.swing.JToggleButton Time3Button;
+    private javax.swing.JToggleButton Time6Button;
+    private javax.swing.JSpinner WaterSpinner;
     private javax.swing.JButton jButtonCancel;
     private javax.swing.JButton jButtonConfirm;
     private javax.swing.JButton jButtonHome;
@@ -872,12 +981,12 @@ public class ReservationPage extends javax.swing.JFrame {
     private javax.swing.JButton jButtonMovies1;
     private javax.swing.JButton jButtonReservation;
     private javax.swing.JButton jButtonReservation1;
-    private javax.swing.JCheckBox jCheckBoxBBQPopcorn;
-    private javax.swing.JCheckBox jCheckBoxChxPopcorn;
-    private javax.swing.JCheckBox jCheckBoxNachos;
-    private javax.swing.JCheckBox jCheckBoxOgPopcorn;
-    private javax.swing.JCheckBox jCheckBoxSoda;
-    private javax.swing.JCheckBox jCheckBoxWater;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabelTicketQuantity;
     private javax.swing.JLabel jLabelTicketsTotal;
     private javax.swing.JLabel jLabelTitleofMovie;
@@ -885,10 +994,6 @@ public class ReservationPage extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldEmail;
     private javax.swing.JTextField jTextFieldName;
     private javax.swing.JTextField jTextFieldSnackTotal;
-    private javax.swing.JToggleButton jToggleButtonTime1;
-    private javax.swing.JToggleButton jToggleButtonTime2;
-    private javax.swing.JToggleButton jToggleButtonTime3;
-    private javax.swing.JToggleButton jToggleButtonTime4;
     private javax.swing.JLabel logo;
     private java.awt.Panel panel3;
     private java.awt.Panel panel4;
