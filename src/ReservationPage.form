@@ -106,19 +106,22 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButtonMovies1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButtonReservation1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButtonHome1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="30" max="32767" attributes="0"/>
-                  <Component id="logo" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jButtonMovies1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonReservation1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonHome1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="logo" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -311,7 +314,7 @@
             <Property name="text" type="java.lang.String" value="10:00AM"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButtonTime1ActionPerformed"/>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jToggleButtonTime1ItemStateChanged"/>
           </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="jToggleButtonTime2">
@@ -328,7 +331,7 @@
             <Property name="text" type="java.lang.String" value="12:30PM"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButtonTime2ActionPerformed"/>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jToggleButtonTime2ItemStateChanged"/>
           </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="jToggleButtonTime3">
@@ -345,7 +348,7 @@
             <Property name="text" type="java.lang.String" value="3:00PM"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButtonTime3ActionPerformed"/>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jToggleButtonTime3ItemStateChanged"/>
           </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="jToggleButtonTime4">
@@ -362,7 +365,7 @@
             <Property name="text" type="java.lang.String" value="6:00PM"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButtonTime4ActionPerformed"/>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jToggleButtonTime4ItemStateChanged"/>
           </Events>
         </Component>
         <Container class="java.awt.Panel" name="panel3">
@@ -473,6 +476,9 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldNameKeyPressed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldEmail">
               <Properties>
@@ -486,6 +492,9 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldEmailKeyPressed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -521,7 +530,7 @@
                                   <Group type="102" attributes="0">
                                       <Component id="jButtonLess" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="Home16" min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="jLabelTicketQuantity" min="-2" pref="26" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jButtonMore" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
@@ -550,7 +559,7 @@
                           <Component id="jLabelTicketsTotal" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                           <Component id="jButtonMore" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonLess" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Home16" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="jLabelTicketQuantity" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                           <Component id="Home15" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="46" max="32767" attributes="0"/>
@@ -642,6 +651,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="+"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMoreActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButtonLess">
               <Properties>
@@ -656,6 +668,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="-"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLessActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="Home15">
               <Properties>
@@ -671,7 +686,7 @@
                 <Property name="text" type="java.lang.String" value="440.00"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="Home16">
+            <Component class="javax.swing.JLabel" name="jLabelTicketQuantity">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -713,7 +728,7 @@
                               <Group type="102" attributes="0">
                                   <Component id="jCheckBoxBBQPopcorn" min="-2" pref="212" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                  <Component id="jCheckBoxWater" max="32767" attributes="0"/>
+                                  <Component id="jCheckBoxWater" pref="156" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">

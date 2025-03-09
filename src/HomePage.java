@@ -50,11 +50,21 @@ public class HomePage extends javax.swing.JFrame {
         MoviesPageBtn1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         MoviesPageBtn1.setForeground(new java.awt.Color(255, 255, 255));
         MoviesPageBtn1.setText("MOVIES");
+        MoviesPageBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MoviesPageBtn1ActionPerformed(evt);
+            }
+        });
 
         ResPageBtn1.setBackground(new java.awt.Color(176, 52, 60));
         ResPageBtn1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         ResPageBtn1.setForeground(new java.awt.Color(255, 255, 255));
         ResPageBtn1.setText("RESERVATION");
+        ResPageBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ResPageBtn1ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Logo.png"))); // NOI18N
 
@@ -127,6 +137,20 @@ public class HomePage extends javax.swing.JFrame {
         Movies.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void MoviesPageBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoviesPageBtn1ActionPerformed
+        // movie button from menu
+        MoviesPage Movies = new MoviesPage();
+        Movies.setVisible(true);
+        this.dispose();    
+    }//GEN-LAST:event_MoviesPageBtn1ActionPerformed
+
+    private void ResPageBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResPageBtn1ActionPerformed
+        // reservation button from menu
+        ReservationPage Reservation = new ReservationPage();
+        Reservation.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_ResPageBtn1ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -104,6 +104,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="MOVIES"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoviesPageBtn1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="ResPageBtn1">
           <Properties>
@@ -118,6 +121,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="RESERVATION"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ResPageBtn1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>

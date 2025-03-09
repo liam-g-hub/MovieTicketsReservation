@@ -530,7 +530,10 @@ public class MoviesPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCompleteUnknownActionPerformed
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-       // home button
+       // home button from menu
+        HomePage Home = new HomePage();
+        Home.setVisible(true);
+        this.dispose();              
     }//GEN-LAST:event_jButtonHomeActionPerformed
 
     private void jButtonReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReservationActionPerformed

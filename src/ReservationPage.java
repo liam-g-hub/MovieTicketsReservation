@@ -1,3 +1,8 @@
+
+import java.text.*;
+import java.awt.event.*;
+import javax.swing.*;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -9,7 +14,10 @@
  * @author saman
  */
 public class ReservationPage extends javax.swing.JFrame {
-
+    DecimalFormat df = new DecimalFormat("#.00");
+    int ticketNum = 1;
+    double ticketSubtotal;
+    String timeSelected;
     /**
      * Creates new form Reservation
      */
@@ -56,7 +64,7 @@ public class ReservationPage extends javax.swing.JFrame {
         jButtonMore = new javax.swing.JButton();
         jButtonLess = new javax.swing.JButton();
         Home15 = new javax.swing.JLabel();
-        Home16 = new javax.swing.JLabel();
+        jLabelTicketQuantity = new javax.swing.JLabel();
         panel4 = new java.awt.Panel();
         Home5 = new javax.swing.JLabel();
         jCheckBoxOgPopcorn = new javax.swing.JCheckBox();
@@ -157,16 +165,17 @@ public class ReservationPage extends javax.swing.JFrame {
         NorthLayout.setVerticalGroup(
             NorthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(NorthLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(NorthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonMovies1)
-                    .addComponent(jButtonReservation1)
-                    .addComponent(jButtonHome1))
-                .addGap(49, 49, 49))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NorthLayout.createSequentialGroup()
                 .addGap(0, 30, Short.MAX_VALUE)
-                .addComponent(logo)
-                .addContainerGap())
+                .addGroup(NorthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NorthLayout.createSequentialGroup()
+                        .addGroup(NorthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButtonMovies1)
+                            .addComponent(jButtonReservation1)
+                            .addComponent(jButtonHome1))
+                        .addGap(49, 49, 49))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NorthLayout.createSequentialGroup()
+                        .addComponent(logo)
+                        .addContainerGap())))
         );
 
         getContentPane().add(North, java.awt.BorderLayout.NORTH);
@@ -186,9 +195,9 @@ public class ReservationPage extends javax.swing.JFrame {
         jToggleButtonTime1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jToggleButtonTime1.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButtonTime1.setText("10:00AM");
-        jToggleButtonTime1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButtonTime1ActionPerformed(evt);
+        jToggleButtonTime1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jToggleButtonTime1ItemStateChanged(evt);
             }
         });
 
@@ -196,9 +205,9 @@ public class ReservationPage extends javax.swing.JFrame {
         jToggleButtonTime2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jToggleButtonTime2.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButtonTime2.setText("12:30PM");
-        jToggleButtonTime2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButtonTime2ActionPerformed(evt);
+        jToggleButtonTime2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jToggleButtonTime2ItemStateChanged(evt);
             }
         });
 
@@ -206,9 +215,9 @@ public class ReservationPage extends javax.swing.JFrame {
         jToggleButtonTime3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jToggleButtonTime3.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButtonTime3.setText("3:00PM");
-        jToggleButtonTime3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButtonTime3ActionPerformed(evt);
+        jToggleButtonTime3.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jToggleButtonTime3ItemStateChanged(evt);
             }
         });
 
@@ -216,9 +225,9 @@ public class ReservationPage extends javax.swing.JFrame {
         jToggleButtonTime4.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jToggleButtonTime4.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButtonTime4.setText("6:00PM");
-        jToggleButtonTime4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButtonTime4ActionPerformed(evt);
+        jToggleButtonTime4.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jToggleButtonTime4ItemStateChanged(evt);
             }
         });
 
@@ -243,10 +252,20 @@ public class ReservationPage extends javax.swing.JFrame {
         jTextFieldName.setBackground(new java.awt.Color(242, 198, 112));
         jTextFieldName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextFieldName.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextFieldNameKeyPressed(evt);
+            }
+        });
 
         jTextFieldEmail.setBackground(new java.awt.Color(242, 198, 112));
         jTextFieldEmail.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextFieldEmail.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldEmail.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextFieldEmailKeyPressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel3Layout = new javax.swing.GroupLayout(panel3);
         panel3.setLayout(panel3Layout);
@@ -313,21 +332,31 @@ public class ReservationPage extends javax.swing.JFrame {
         jButtonMore.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButtonMore.setForeground(new java.awt.Color(242, 198, 112));
         jButtonMore.setText("+");
+        jButtonMore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMoreActionPerformed(evt);
+            }
+        });
 
         jButtonLess.setBackground(new java.awt.Color(175, 52, 59));
         jButtonLess.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButtonLess.setForeground(new java.awt.Color(242, 198, 112));
         jButtonLess.setText("-");
+        jButtonLess.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLessActionPerformed(evt);
+            }
+        });
 
         Home15.setBackground(new java.awt.Color(255, 255, 255));
         Home15.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         Home15.setForeground(new java.awt.Color(255, 255, 255));
         Home15.setText("440.00");
 
-        Home16.setBackground(new java.awt.Color(255, 255, 255));
-        Home16.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        Home16.setForeground(new java.awt.Color(255, 255, 255));
-        Home16.setText("1");
+        jLabelTicketQuantity.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelTicketQuantity.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabelTicketQuantity.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTicketQuantity.setText("1");
 
         javax.swing.GroupLayout panel5Layout = new javax.swing.GroupLayout(panel5);
         panel5.setLayout(panel5Layout);
@@ -352,7 +381,7 @@ public class ReservationPage extends javax.swing.JFrame {
                             .addGroup(panel5Layout.createSequentialGroup()
                                 .addComponent(jButtonLess)
                                 .addGap(18, 18, 18)
-                                .addComponent(Home16, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabelTicketQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButtonMore)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -374,7 +403,7 @@ public class ReservationPage extends javax.swing.JFrame {
                     .addComponent(jLabelTicketsTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonMore)
                     .addComponent(jButtonLess)
-                    .addComponent(Home16, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelTicketQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Home15, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
@@ -466,7 +495,7 @@ public class ReservationPage extends javax.swing.JFrame {
                         .addGroup(panel4Layout.createSequentialGroup()
                             .addComponent(jCheckBoxBBQPopcorn, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(43, 43, 43)
-                            .addComponent(jCheckBoxWater, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jCheckBoxWater, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel4Layout.createSequentialGroup()
                             .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(Home11, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -620,19 +649,28 @@ public class ReservationPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        // TODO add your handling code here:
+        // TO DO
     }//GEN-LAST:event_jButtonHomeActionPerformed
 
     private void jButtonReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReservationActionPerformed
-        // TODO add your handling code here:
+        // reservation button from menu
+        ReservationPage Reservation = new ReservationPage();
+        Reservation.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButtonReservationActionPerformed
 
     private void jButtonMoviesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMoviesActionPerformed
-        // TODO add your handling code here:
+        // movie button from menu
+        MoviesPage Movies = new MoviesPage();
+        Movies.setVisible(true);
+        this.dispose();  
     }//GEN-LAST:event_jButtonMoviesActionPerformed
 
     private void jButtonHome1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHome1ActionPerformed
-        // TODO add your handling code here:
+        // movie button from menu
+        MoviesPage Movies = new MoviesPage();
+        Movies.setVisible(true);
+        this.dispose();  
     }//GEN-LAST:event_jButtonHome1ActionPerformed
 
     private void jButtonReservation1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReservation1ActionPerformed
@@ -681,21 +719,95 @@ public class ReservationPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBoxOgPopcornActionPerformed
 
-    private void jToggleButtonTime4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonTime4ActionPerformed
+    private void jToggleButtonTime1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jToggleButtonTime1ItemStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButtonTime4ActionPerformed
+    }//GEN-LAST:event_jToggleButtonTime1ItemStateChanged
 
-    private void jToggleButtonTime3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonTime3ActionPerformed
+    private void jToggleButtonTime2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jToggleButtonTime2ItemStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButtonTime3ActionPerformed
+    }//GEN-LAST:event_jToggleButtonTime2ItemStateChanged
 
-    private void jToggleButtonTime2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonTime2ActionPerformed
+    private void jToggleButtonTime3ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jToggleButtonTime3ItemStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButtonTime2ActionPerformed
+    }//GEN-LAST:event_jToggleButtonTime3ItemStateChanged
 
-    private void jToggleButtonTime1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonTime1ActionPerformed
+    private void jToggleButtonTime4ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jToggleButtonTime4ItemStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButtonTime1ActionPerformed
+    }//GEN-LAST:event_jToggleButtonTime4ItemStateChanged
+    // NAME AND EMAIL TEXTFIELD
+    private void jTextFieldNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldNameKeyPressed
+        char keyChar = evt.getKeyChar();
+        int keyCode = evt.getKeyCode();
+        
+        if ((keyChar >= 'A' && keyChar <= 'Z') || (keyChar >= 'a' && keyChar <= 'z')) { // allow letters
+            jTextFieldName.setEditable(true);
+        }
+        else if (keyCode == KeyEvent.VK_BACK_SPACE || keyCode == KeyEvent.VK_DELETE || keyCode == KeyEvent.VK_SPACE || keyCode == KeyEvent.VK_SHIFT || keyCode == KeyEvent.VK_CAPS_LOCK){ // allowed actions
+            jTextFieldName.setEditable(true);
+        }
+        else if (keyCode == KeyEvent.VK_ENTER){ // code to run after pressing enter
+            // character limit
+            String jTFInput = jTextFieldName.getText();
+            int jTFInputLength = jTFInput.length();
+            if (jTFInputLength > 12){
+                JOptionPane.showMessageDialog(this, "Please input up to 12 characters only.");
+            }
+            // insert other enter functions here
+        }
+        else
+        {
+            jTextFieldName.setEditable(false);
+            JOptionPane.showMessageDialog(this, "Invalid input. Please only enter letters.");  
+        }
+    }//GEN-LAST:event_jTextFieldNameKeyPressed
+
+    private void jTextFieldEmailKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldEmailKeyPressed
+       char keyChar = evt.getKeyChar();
+        int keyCode = evt.getKeyCode();
+        
+        if (Character.isLetterOrDigit(keyChar) || keyChar == '@' || keyChar == '.') { // allow letters, numbers, @, and .
+            jTextFieldName.setEditable(true);
+        }
+        else if (keyCode == KeyEvent.VK_BACK_SPACE || keyCode == KeyEvent.VK_DELETE || keyCode == KeyEvent.VK_SPACE || keyCode == KeyEvent.VK_SHIFT || keyCode == KeyEvent.VK_CAPS_LOCK){ // allowed actions
+            jTextFieldName.setEditable(true);
+        }
+        else if (keyCode == KeyEvent.VK_ENTER){ // code to run after pressing enter
+            // insert other enter functions here
+        }
+        else
+        {
+            jTextFieldName.setEditable(false);
+            JOptionPane.showMessageDialog(this, "Invalid input. Only letters, @, and . are allowed.");  
+        }
+    }//GEN-LAST:event_jTextFieldEmailKeyPressed
+    // TICKET JBUTTON
+    private void jButtonLessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLessActionPerformed
+        if (ticketNum == 1){
+            JOptionPane.showMessageDialog(this, "Ticket quantity cannot be zero.");
+        }
+        else{
+            ticketNum--;
+            jLabelTicketQuantity.setText(Integer.toString(ticketNum));
+            
+            ticketSubtotal = ticketNum * 440;
+            String ticketSubtotalString = df.format(ticketSubtotal);
+            jLabelTicketsTotal.setText(ticketSubtotalString);
+        }
+    }//GEN-LAST:event_jButtonLessActionPerformed
+
+    private void jButtonMoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMoreActionPerformed
+        if (ticketNum == 10){
+            JOptionPane.showMessageDialog(this, "Sorry! You cannot order more than 10 tickets.");
+        }
+        else{
+            ticketNum++;
+            jLabelTicketQuantity.setText(Integer.toString(ticketNum));
+            
+            ticketSubtotal = ticketNum * 440;
+            String ticketSubtotalString = df.format(ticketSubtotal);
+            jLabelTicketsTotal.setText(ticketSubtotalString);
+        }
+    }//GEN-LAST:event_jButtonMoreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -742,7 +854,6 @@ public class ReservationPage extends javax.swing.JFrame {
     private javax.swing.JLabel Home13;
     private javax.swing.JLabel Home14;
     private javax.swing.JLabel Home15;
-    private javax.swing.JLabel Home16;
     private javax.swing.JLabel Home3;
     private javax.swing.JLabel Home5;
     private javax.swing.JLabel Home6;
@@ -767,6 +878,7 @@ public class ReservationPage extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBoxOgPopcorn;
     private javax.swing.JCheckBox jCheckBoxSoda;
     private javax.swing.JCheckBox jCheckBoxWater;
+    private javax.swing.JLabel jLabelTicketQuantity;
     private javax.swing.JLabel jLabelTicketsTotal;
     private javax.swing.JLabel jLabelTitleofMovie;
     private javax.swing.JLabel jLabelTotalBill;
