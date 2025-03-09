@@ -26,14 +26,12 @@ public class MoviesPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        menu = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabelFlowPoster = new javax.swing.JLabel();
-        jLabelMoanaPoster = new javax.swing.JLabel();
-        jLabelGorgePoster = new javax.swing.JLabel();
-        jLabelFDeadThingPoster = new javax.swing.JLabel();
-        jLabelCompanionPoster = new javax.swing.JLabel();
-        jLabelCompleteUnknownPoster = new javax.swing.JLabel();
+        North = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButtonHome = new javax.swing.JButton();
+        jButtonMovies = new javax.swing.JButton();
+        jButtonReservation = new javax.swing.JButton();
+        Center = new javax.swing.JPanel();
         jLabelFlow = new javax.swing.JLabel();
         Home5 = new javax.swing.JLabel();
         jButtonFlow = new javax.swing.JButton();
@@ -63,376 +61,21 @@ public class MoviesPage extends javax.swing.JFrame {
         jButtonCompleteUnknown = new javax.swing.JButton();
         Home24 = new javax.swing.JLabel();
         Home25 = new javax.swing.JLabel();
-        logo = new javax.swing.JLabel();
-        jButtonHome = new javax.swing.JButton();
-        jButtonReservation = new javax.swing.JButton();
-        jButtonMovies = new javax.swing.JButton();
+        jLabelFlowPic = new javax.swing.JLabel();
+        jLabelMoanaPic = new javax.swing.JLabel();
+        Home20 = new javax.swing.JLabel();
+        jLabelTheDeadThingPic = new javax.swing.JLabel();
+        jLabelTheGeorgePic = new javax.swing.JLabel();
+        jLabelChampionic = new javax.swing.JLabel();
+        Home21 = new javax.swing.JLabel();
+        jLabelCompleteUnknownPic = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        menu.setBackground(new java.awt.Color(175, 52, 59));
+        North.setBackground(new java.awt.Color(175, 52, 59));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabelFlowPoster.setIcon(new javax.swing.ImageIcon(getClass().getResource("/metrocine/flow.jpg"))); // NOI18N
-
-        jLabelMoanaPoster.setIcon(new javax.swing.ImageIcon(getClass().getResource("/metrocine/moana.jpg"))); // NOI18N
-
-        jLabelGorgePoster.setIcon(new javax.swing.ImageIcon(getClass().getResource("/metrocine/the gorge.jpg"))); // NOI18N
-
-        jLabelFDeadThingPoster.setIcon(new javax.swing.ImageIcon(getClass().getResource("/metrocine/dead thing.jpg"))); // NOI18N
-
-        jLabelCompanionPoster.setIcon(new javax.swing.ImageIcon(getClass().getResource("/metrocine/companion.jpg"))); // NOI18N
-
-        jLabelCompleteUnknownPoster.setIcon(new javax.swing.ImageIcon(getClass().getResource("/metrocine/unknonw.jpg"))); // NOI18N
-
-        jLabelFlow.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelFlow.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabelFlow.setForeground(new java.awt.Color(175, 52, 59));
-        jLabelFlow.setText("FLOW");
-
-        Home5.setBackground(new java.awt.Color(255, 255, 255));
-        Home5.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        Home5.setForeground(new java.awt.Color(153, 153, 153));
-        Home5.setText("10:00AM 12:30PM ");
-
-        jButtonFlow.setBackground(new java.awt.Color(242, 198, 112));
-        jButtonFlow.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jButtonFlow.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonFlow.setText("GET TICKETS");
-        jButtonFlow.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonFlowActionPerformed(evt);
-            }
-        });
-
-        Home6.setBackground(new java.awt.Color(255, 255, 255));
-        Home6.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        Home6.setText("MARCH 12, 2025");
-
-        Home7.setBackground(new java.awt.Color(255, 255, 255));
-        Home7.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        Home7.setForeground(new java.awt.Color(153, 153, 153));
-        Home7.setText("3:00PM");
-
-        jLabelGorge1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelGorge1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabelGorge1.setForeground(new java.awt.Color(175, 52, 59));
-        jLabelGorge1.setText("THE");
-
-        jLabelGorge2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelGorge2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabelGorge2.setForeground(new java.awt.Color(175, 52, 59));
-        jLabelGorge2.setText("GORGE");
-
-        jLabelDeadThing1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelDeadThing1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabelDeadThing1.setForeground(new java.awt.Color(175, 52, 59));
-        jLabelDeadThing1.setText("THE DEAD");
-
-        jLabelDeadThing2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelDeadThing2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabelDeadThing2.setForeground(new java.awt.Color(175, 52, 59));
-        jLabelDeadThing2.setText("THING");
-
-        jLabelMoana1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelMoana1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabelMoana1.setForeground(new java.awt.Color(175, 52, 59));
-        jLabelMoana1.setText("MOANA");
-
-        jLabelMoana2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelMoana2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabelMoana2.setForeground(new java.awt.Color(175, 52, 59));
-        jLabelMoana2.setText("RETURNS");
-
-        Home13.setBackground(new java.awt.Color(255, 255, 255));
-        Home13.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        Home13.setText("MARCH 12, 2025");
-
-        Home14.setBackground(new java.awt.Color(255, 255, 255));
-        Home14.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        Home14.setText("MARCH 12, 2025");
-
-        jButtonGorge.setBackground(new java.awt.Color(242, 198, 112));
-        jButtonGorge.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jButtonGorge.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonGorge.setText("GET TICKETS");
-        jButtonGorge.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonGorgeActionPerformed(evt);
-            }
-        });
-
-        jButtonDeadThing.setBackground(new java.awt.Color(242, 198, 112));
-        jButtonDeadThing.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jButtonDeadThing.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonDeadThing.setText("GET TICKETS");
-        jButtonDeadThing.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDeadThingActionPerformed(evt);
-            }
-        });
-
-        Home15.setBackground(new java.awt.Color(255, 255, 255));
-        Home15.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        Home15.setForeground(new java.awt.Color(153, 153, 153));
-        Home15.setText("10:00AM 12:30PM ");
-
-        Home16.setBackground(new java.awt.Color(255, 255, 255));
-        Home16.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        Home16.setForeground(new java.awt.Color(153, 153, 153));
-        Home16.setText("10:00AM 12:30PM ");
-
-        Home17.setBackground(new java.awt.Color(255, 255, 255));
-        Home17.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        Home17.setText("MARCH 12, 2025");
-
-        jButtonMoana.setBackground(new java.awt.Color(242, 198, 112));
-        jButtonMoana.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jButtonMoana.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonMoana.setText("GET TICKETS");
-        jButtonMoana.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMoanaActionPerformed(evt);
-            }
-        });
-
-        Home18.setBackground(new java.awt.Color(255, 255, 255));
-        Home18.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        Home18.setForeground(new java.awt.Color(153, 153, 153));
-        Home18.setText("10:00AM 12:30PM ");
-
-        Home19.setBackground(new java.awt.Color(255, 255, 255));
-        Home19.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        Home19.setForeground(new java.awt.Color(153, 153, 153));
-        Home19.setText("3:00PM");
-
-        jLabelTheCompanion1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelTheCompanion1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabelTheCompanion1.setForeground(new java.awt.Color(175, 52, 59));
-        jLabelTheCompanion1.setText("THE");
-
-        jLabelTheCompleteUnknown1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelTheCompleteUnknown1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabelTheCompleteUnknown1.setForeground(new java.awt.Color(175, 52, 59));
-        jLabelTheCompleteUnknown1.setText("THE COMPLETE");
-
-        jLabelTheCompleteUnknown2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelTheCompleteUnknown2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabelTheCompleteUnknown2.setForeground(new java.awt.Color(175, 52, 59));
-        jLabelTheCompleteUnknown2.setText("UNKOWN");
-
-        jLabelTheCompanion2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelTheCompanion2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabelTheCompanion2.setForeground(new java.awt.Color(175, 52, 59));
-        jLabelTheCompanion2.setText("COMPANION");
-
-        jButtonCompanion.setBackground(new java.awt.Color(242, 198, 112));
-        jButtonCompanion.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jButtonCompanion.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonCompanion.setText("GET TICKETS");
-        jButtonCompanion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCompanionActionPerformed(evt);
-            }
-        });
-
-        jButtonCompleteUnknown.setBackground(new java.awt.Color(242, 198, 112));
-        jButtonCompleteUnknown.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jButtonCompleteUnknown.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonCompleteUnknown.setText("GET TICKETS");
-        jButtonCompleteUnknown.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCompleteUnknownActionPerformed(evt);
-            }
-        });
-
-        Home24.setBackground(new java.awt.Color(255, 255, 255));
-        Home24.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        Home24.setForeground(new java.awt.Color(153, 153, 153));
-        Home24.setText("10:00AM 12:30PM ");
-
-        Home25.setBackground(new java.awt.Color(255, 255, 255));
-        Home25.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        Home25.setForeground(new java.awt.Color(153, 153, 153));
-        Home25.setText("10:00AM 12:30PM ");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelFlowPoster)
-                    .addComponent(jLabelMoanaPoster))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(Home19, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelMoana1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabelFlow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Home5, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Home6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Home7, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButtonFlow))
-                            .addComponent(jLabelMoana2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Home17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonMoana)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(Home18, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabelCompanionPoster)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabelTheCompanion1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabelTheCompanion2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jButtonCompanion))
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(Home24, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabelGorgePoster)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelGorge1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabelGorge2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(Home13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jButtonGorge)
-                                            .addComponent(Home15, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 0, Short.MAX_VALUE)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabelCompleteUnknownPoster)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelTheCompleteUnknown1)
-                                    .addComponent(jLabelTheCompleteUnknown2)
-                                    .addComponent(jButtonCompleteUnknown)
-                                    .addComponent(Home25, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabelFDeadThingPoster)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabelDeadThing1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabelDeadThing2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jButtonDeadThing)
-                                            .addComponent(Home14, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(Home16, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                        .addGap(7, 7, 7))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabelFlowPoster)
-                            .addComponent(jLabelGorgePoster, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabelFDeadThingPoster, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(jLabelFlow, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Home6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonFlow)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(Home5, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(21, 21, 21))
-                                    .addComponent(Home7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabelGorge1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelGorge2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Home13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonGorge)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Home15, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jLabelDeadThing1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelDeadThing2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Home14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonDeadThing)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Home16)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelMoanaPoster)
-                            .addComponent(jLabelCompanionPoster)
-                            .addComponent(jLabelCompleteUnknownPoster)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(66, 66, 66)
-                                        .addComponent(jLabelMoana1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabelMoana2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(12, 12, 12)
-                                        .addComponent(Home17)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButtonMoana)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Home18, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(69, 69, 69)
-                                        .addComponent(jLabelTheCompanion1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabelTheCompanion2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(28, 28, 28)
-                                        .addComponent(jButtonCompanion)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(Home24, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(69, 69, 69)
-                                .addComponent(jLabelTheCompleteUnknown1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabelTheCompleteUnknown2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(jButtonCompleteUnknown)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Home25, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addComponent(Home19, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/metrocine/metrocine logo.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Logo.png"))); // NOI18N
 
         jButtonHome.setBackground(new java.awt.Color(175, 52, 59));
         jButtonHome.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -441,16 +84,6 @@ public class MoviesPage extends javax.swing.JFrame {
         jButtonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonHomeActionPerformed(evt);
-            }
-        });
-
-        jButtonReservation.setBackground(new java.awt.Color(175, 52, 59));
-        jButtonReservation.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jButtonReservation.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonReservation.setText("RESERVATION");
-        jButtonReservation.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonReservationActionPerformed(evt);
             }
         });
 
@@ -464,51 +97,410 @@ public class MoviesPage extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout menuLayout = new javax.swing.GroupLayout(menu);
-        menu.setLayout(menuLayout);
-        menuLayout.setHorizontalGroup(
-            menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(logo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButtonHome, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonMovies, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        jButtonReservation.setBackground(new java.awt.Color(175, 52, 59));
+        jButtonReservation.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jButtonReservation.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonReservation.setText("RESERVATION");
+        jButtonReservation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonReservationActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout NorthLayout = new javax.swing.GroupLayout(North);
+        North.setLayout(NorthLayout);
+        NorthLayout.setHorizontalGroup(
+            NorthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NorthLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 229, Short.MAX_VALUE)
+                .addComponent(jButtonHome, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonMovies, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonReservation)
+                .addGap(30, 30, 30))
         );
-        menuLayout.setVerticalGroup(
-            menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuLayout.createSequentialGroup()
-                .addGroup(menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(menuLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(logo)
-                        .addGap(12, 12, 12))
-                    .addGroup(menuLayout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addGroup(menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButtonHome)
+        NorthLayout.setVerticalGroup(
+            NorthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NorthLayout.createSequentialGroup()
+                .addContainerGap(24, Short.MAX_VALUE)
+                .addGroup(NorthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NorthLayout.createSequentialGroup()
+                        .addGroup(NorthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButtonReservation)
-                            .addComponent(jButtonMovies))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(146, 146, 146))
+                            .addComponent(jButtonMovies)
+                            .addComponent(jButtonHome))
+                        .addGap(49, 49, 49))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NorthLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addContainerGap())))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        getContentPane().add(North, java.awt.BorderLayout.NORTH);
+
+        Center.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabelFlow.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelFlow.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabelFlow.setForeground(new java.awt.Color(175, 52, 59));
+        jLabelFlow.setText("FLOW");
+
+        Home5.setBackground(new java.awt.Color(255, 255, 255));
+        Home5.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        Home5.setForeground(new java.awt.Color(153, 153, 153));
+        Home5.setText("10:00AM 12:30PM ");
+
+        jButtonFlow.setBackground(new java.awt.Color(242, 198, 112));
+        jButtonFlow.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jButtonFlow.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonFlow.setText("GET TICKETS");
+        jButtonFlow.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFlowActionPerformed(evt);
+            }
+        });
+
+        Home6.setBackground(new java.awt.Color(255, 255, 255));
+        Home6.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Home6.setText("MARCH 12, 2025");
+
+        Home7.setBackground(new java.awt.Color(255, 255, 255));
+        Home7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        Home7.setForeground(new java.awt.Color(153, 153, 153));
+        Home7.setText("3:00PM");
+
+        jLabelGorge1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelGorge1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabelGorge1.setForeground(new java.awt.Color(175, 52, 59));
+        jLabelGorge1.setText("THE");
+
+        jLabelGorge2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelGorge2.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabelGorge2.setForeground(new java.awt.Color(175, 52, 59));
+        jLabelGorge2.setText("GORGE");
+
+        jLabelDeadThing1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelDeadThing1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabelDeadThing1.setForeground(new java.awt.Color(175, 52, 59));
+        jLabelDeadThing1.setText("THE DEAD");
+
+        jLabelDeadThing2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelDeadThing2.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabelDeadThing2.setForeground(new java.awt.Color(175, 52, 59));
+        jLabelDeadThing2.setText("THING");
+
+        jLabelMoana1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelMoana1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabelMoana1.setForeground(new java.awt.Color(175, 52, 59));
+        jLabelMoana1.setText("MOANA");
+
+        jLabelMoana2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelMoana2.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabelMoana2.setForeground(new java.awt.Color(175, 52, 59));
+        jLabelMoana2.setText("RETURNS");
+
+        Home13.setBackground(new java.awt.Color(255, 255, 255));
+        Home13.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Home13.setText("MARCH 12, 2025");
+
+        Home14.setBackground(new java.awt.Color(255, 255, 255));
+        Home14.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Home14.setText("MARCH 12, 2025");
+
+        jButtonGorge.setBackground(new java.awt.Color(242, 198, 112));
+        jButtonGorge.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jButtonGorge.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonGorge.setText("GET TICKETS");
+        jButtonGorge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGorgeActionPerformed(evt);
+            }
+        });
+
+        jButtonDeadThing.setBackground(new java.awt.Color(242, 198, 112));
+        jButtonDeadThing.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jButtonDeadThing.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonDeadThing.setText("GET TICKETS");
+        jButtonDeadThing.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDeadThingActionPerformed(evt);
+            }
+        });
+
+        Home15.setBackground(new java.awt.Color(255, 255, 255));
+        Home15.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        Home15.setForeground(new java.awt.Color(153, 153, 153));
+        Home15.setText("10:00AM 12:30PM ");
+
+        Home16.setBackground(new java.awt.Color(255, 255, 255));
+        Home16.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        Home16.setForeground(new java.awt.Color(153, 153, 153));
+        Home16.setText("10:00AM 12:30PM ");
+
+        Home17.setBackground(new java.awt.Color(255, 255, 255));
+        Home17.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Home17.setText("MARCH 12, 2025");
+
+        jButtonMoana.setBackground(new java.awt.Color(242, 198, 112));
+        jButtonMoana.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jButtonMoana.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonMoana.setText("GET TICKETS");
+        jButtonMoana.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMoanaActionPerformed(evt);
+            }
+        });
+
+        Home18.setBackground(new java.awt.Color(255, 255, 255));
+        Home18.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        Home18.setForeground(new java.awt.Color(153, 153, 153));
+        Home18.setText("10:00AM 12:30PM ");
+
+        Home19.setBackground(new java.awt.Color(255, 255, 255));
+        Home19.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        Home19.setForeground(new java.awt.Color(153, 153, 153));
+        Home19.setText("3:00PM");
+
+        jLabelTheCompanion1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelTheCompanion1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabelTheCompanion1.setForeground(new java.awt.Color(175, 52, 59));
+        jLabelTheCompanion1.setText("THE");
+
+        jLabelTheCompleteUnknown1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelTheCompleteUnknown1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabelTheCompleteUnknown1.setForeground(new java.awt.Color(175, 52, 59));
+        jLabelTheCompleteUnknown1.setText("THE COMPLETE");
+
+        jLabelTheCompleteUnknown2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelTheCompleteUnknown2.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabelTheCompleteUnknown2.setForeground(new java.awt.Color(175, 52, 59));
+        jLabelTheCompleteUnknown2.setText("UNKOWN");
+
+        jLabelTheCompanion2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelTheCompanion2.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabelTheCompanion2.setForeground(new java.awt.Color(175, 52, 59));
+        jLabelTheCompanion2.setText("COMPANION");
+
+        jButtonCompanion.setBackground(new java.awt.Color(242, 198, 112));
+        jButtonCompanion.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jButtonCompanion.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonCompanion.setText("GET TICKETS");
+        jButtonCompanion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCompanionActionPerformed(evt);
+            }
+        });
+
+        jButtonCompleteUnknown.setBackground(new java.awt.Color(242, 198, 112));
+        jButtonCompleteUnknown.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jButtonCompleteUnknown.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonCompleteUnknown.setText("GET TICKETS");
+        jButtonCompleteUnknown.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCompleteUnknownActionPerformed(evt);
+            }
+        });
+
+        Home24.setBackground(new java.awt.Color(255, 255, 255));
+        Home24.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        Home24.setForeground(new java.awt.Color(153, 153, 153));
+        Home24.setText("10:00AM 12:30PM ");
+
+        Home25.setBackground(new java.awt.Color(255, 255, 255));
+        Home25.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        Home25.setForeground(new java.awt.Color(153, 153, 153));
+        Home25.setText("10:00AM 12:30PM ");
+
+        jLabelFlowPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/flow.jpg"))); // NOI18N
+
+        jLabelMoanaPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/moana.jpg"))); // NOI18N
+
+        Home20.setBackground(new java.awt.Color(255, 255, 255));
+        Home20.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Home20.setText("MARCH 12, 2025");
+
+        jLabelTheDeadThingPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/dead thing.jpg"))); // NOI18N
+
+        jLabelTheGeorgePic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/the gorge.jpg"))); // NOI18N
+
+        jLabelChampionic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/companion.jpg"))); // NOI18N
+
+        Home21.setBackground(new java.awt.Color(255, 255, 255));
+        Home21.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Home21.setText("MARCH 12, 2025");
+
+        jLabelCompleteUnknownPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/unknonw.jpg"))); // NOI18N
+
+        jPanel1.setBackground(new java.awt.Color(175, 52, 59));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(menu, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        javax.swing.GroupLayout CenterLayout = new javax.swing.GroupLayout(Center);
+        Center.setLayout(CenterLayout);
+        CenterLayout.setHorizontalGroup(
+            CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CenterLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addComponent(jLabelFlowPic)
+                        .addGap(18, 18, 18)
+                        .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Home7, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabelFlow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Home5, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Home6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonFlow))))
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addComponent(jLabelMoanaPic)
+                        .addGap(18, 18, 18)
+                        .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonMoana)
+                            .addComponent(Home18, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Home19, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelMoana1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelMoana2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Home17, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addComponent(jLabelTheGeorgePic)
+                        .addGap(18, 18, 18)
+                        .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelGorge2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelGorge1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Home13, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonGorge)
+                            .addComponent(Home15, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jLabelChampionic)
+                        .addGap(18, 18, 18)
+                        .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelTheCompanion1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelTheCompanion2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Home20, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonCompanion)
+                            .addComponent(Home24, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(39, 39, 39)
+                .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addComponent(jLabelTheDeadThingPic)
+                        .addGap(18, 18, 18)
+                        .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelDeadThing2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDeadThing1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Home14, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonDeadThing)
+                            .addComponent(Home16, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addComponent(jLabelCompleteUnknownPic)
+                        .addGap(18, 18, 18)
+                        .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelTheCompleteUnknown2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelTheCompleteUnknown1)
+                            .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(Home25, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonCompleteUnknown))
+                            .addComponent(Home21, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(20, 20, 20))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        CenterLayout.setVerticalGroup(
+            CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CenterLayout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addComponent(jLabelGorge1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelGorge2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Home13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonGorge)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Home15, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelTheGeorgePic)
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addComponent(jLabelDeadThing1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelDeadThing2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Home14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonDeadThing)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Home16))
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addComponent(jLabelFlow, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Home6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonFlow)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Home5, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Home7, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelTheDeadThingPic)
+                    .addComponent(jLabelFlowPic))
+                .addGap(72, 72, 72)
+                .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelChampionic)
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addComponent(jLabelTheCompanion1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelTheCompanion2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Home20)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonCompanion)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Home24, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jLabelMoanaPic))
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addComponent(jLabelMoana1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelMoana2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Home17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonMoana)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Home18, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Home19, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelCompleteUnknownPic)
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(Home21))
+                    .addGroup(CenterLayout.createSequentialGroup()
+                        .addComponent(jLabelTheCompleteUnknown1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelTheCompleteUnknown2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)
+                        .addComponent(jButtonCompleteUnknown)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Home25, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        getContentPane().add(Center, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -593,6 +585,7 @@ public class MoviesPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Center;
     private javax.swing.JLabel Home13;
     private javax.swing.JLabel Home14;
     private javax.swing.JLabel Home15;
@@ -600,11 +593,14 @@ public class MoviesPage extends javax.swing.JFrame {
     private javax.swing.JLabel Home17;
     private javax.swing.JLabel Home18;
     private javax.swing.JLabel Home19;
+    private javax.swing.JLabel Home20;
+    private javax.swing.JLabel Home21;
     private javax.swing.JLabel Home24;
     private javax.swing.JLabel Home25;
     private javax.swing.JLabel Home5;
     private javax.swing.JLabel Home6;
     private javax.swing.JLabel Home7;
+    private javax.swing.JPanel North;
     private javax.swing.JButton jButtonCompanion;
     private javax.swing.JButton jButtonCompleteUnknown;
     private javax.swing.JButton jButtonDeadThing;
@@ -614,25 +610,24 @@ public class MoviesPage extends javax.swing.JFrame {
     private javax.swing.JButton jButtonMoana;
     private javax.swing.JButton jButtonMovies;
     private javax.swing.JButton jButtonReservation;
-    private javax.swing.JLabel jLabelCompanionPoster;
-    private javax.swing.JLabel jLabelCompleteUnknownPoster;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelChampionic;
+    private javax.swing.JLabel jLabelCompleteUnknownPic;
     private javax.swing.JLabel jLabelDeadThing1;
     private javax.swing.JLabel jLabelDeadThing2;
-    private javax.swing.JLabel jLabelFDeadThingPoster;
     private javax.swing.JLabel jLabelFlow;
-    private javax.swing.JLabel jLabelFlowPoster;
+    private javax.swing.JLabel jLabelFlowPic;
     private javax.swing.JLabel jLabelGorge1;
     private javax.swing.JLabel jLabelGorge2;
-    private javax.swing.JLabel jLabelGorgePoster;
     private javax.swing.JLabel jLabelMoana1;
     private javax.swing.JLabel jLabelMoana2;
-    private javax.swing.JLabel jLabelMoanaPoster;
+    private javax.swing.JLabel jLabelMoanaPic;
     private javax.swing.JLabel jLabelTheCompanion1;
     private javax.swing.JLabel jLabelTheCompanion2;
     private javax.swing.JLabel jLabelTheCompleteUnknown1;
     private javax.swing.JLabel jLabelTheCompleteUnknown2;
+    private javax.swing.JLabel jLabelTheDeadThingPic;
+    private javax.swing.JLabel jLabelTheGeorgePic;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel logo;
-    private javax.swing.JPanel menu;
     // End of variables declaration//GEN-END:variables
 }
