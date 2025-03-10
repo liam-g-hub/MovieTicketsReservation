@@ -141,7 +141,6 @@ public class SeatPage extends javax.swing.JFrame {
         ConfirmBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(990, 700));
 
         North_SeatPage.setBackground(new java.awt.Color(176, 52, 60));
 
@@ -149,6 +148,11 @@ public class SeatPage extends javax.swing.JFrame {
         ResPageBtn4.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         ResPageBtn4.setForeground(new java.awt.Color(255, 255, 255));
         ResPageBtn4.setText("RESERVATION");
+        ResPageBtn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ResPageBtn4ActionPerformed(evt);
+            }
+        });
 
         MoviesPageBtn4.setBackground(new java.awt.Color(176, 52, 60));
         MoviesPageBtn4.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -164,6 +168,11 @@ public class SeatPage extends javax.swing.JFrame {
         HomePageBtn4.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         HomePageBtn4.setForeground(new java.awt.Color(255, 255, 255));
         HomePageBtn4.setText("HOME");
+        HomePageBtn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HomePageBtn4ActionPerformed(evt);
+            }
+        });
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Logo.png"))); // NOI18N
 
@@ -1840,12 +1849,29 @@ public class SeatPage extends javax.swing.JFrame {
     }//GEN-LAST:event_SeatMouseExited
 
     private void MoviesPageBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoviesPageBtn4ActionPerformed
-        // TODO add your handling code here:
+       // movie button from menu
+        MoviesPage Movies = new MoviesPage();
+        Movies.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_MoviesPageBtn4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void HomePageBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomePageBtn4ActionPerformed
+        // home button from menu
+        HomePage Home = new HomePage();
+        Home.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_HomePageBtn4ActionPerformed
+
+    private void ResPageBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResPageBtn4ActionPerformed
+        // reservation button from menu
+        ReservationPage Reservation = new ReservationPage();
+        Reservation.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_ResPageBtn4ActionPerformed
 
     /**
      * @param args the command line arguments

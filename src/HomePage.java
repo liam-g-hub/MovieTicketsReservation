@@ -37,7 +37,6 @@ public class HomePage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(950, 700));
 
         North_HomePage.setBackground(new java.awt.Color(176, 52, 60));
 
@@ -45,6 +44,11 @@ public class HomePage extends javax.swing.JFrame {
         HomePageBtn1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         HomePageBtn1.setForeground(new java.awt.Color(255, 255, 255));
         HomePageBtn1.setText("HOME");
+        HomePageBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HomePageBtn1ActionPerformed(evt);
+            }
+        });
 
         MoviesPageBtn1.setBackground(new java.awt.Color(176, 52, 60));
         MoviesPageBtn1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -151,6 +155,13 @@ public class HomePage extends javax.swing.JFrame {
         Reservation.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_ResPageBtn1ActionPerformed
+
+    private void HomePageBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomePageBtn1ActionPerformed
+        // TODO add your handling code here:
+        HomePage Home = new HomePage();
+        Home.setVisible(true);
+        this.dispose();  
+    }//GEN-LAST:event_HomePageBtn1ActionPerformed
 
     /**
      * @param args the command line arguments

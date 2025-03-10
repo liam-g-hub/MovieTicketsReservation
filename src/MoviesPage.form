@@ -181,7 +181,7 @@
                   <EmptySpace pref="39" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabelTheGeorgePic" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelTheGorgePic" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabelGorge2" min="-2" pref="105" max="-2" attributes="0"/>
@@ -193,7 +193,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                          <Component id="jLabelChampionic" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelCompanionPic" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabelTheCompanion1" min="-2" pref="81" max="-2" attributes="0"/>
@@ -252,7 +252,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="Home15" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jLabelTheGeorgePic" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelTheGorgePic" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabelDeadThing1" min="-2" pref="23" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -280,7 +280,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabelChampionic" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelCompanionPic" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabelTheCompanion1" min="-2" pref="23" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -521,7 +521,7 @@
             <Property name="text" type="java.lang.String" value="GET TICKETS"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonGorgeActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonFlowActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonDeadThing">
@@ -538,7 +538,7 @@
             <Property name="text" type="java.lang.String" value="GET TICKETS"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonDeadThingActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonFlowActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="Home15">
@@ -594,7 +594,7 @@
             <Property name="text" type="java.lang.String" value="GET TICKETS"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMoanaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonFlowActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="Home18">
@@ -695,7 +695,7 @@
             <Property name="text" type="java.lang.String" value="GET TICKETS"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCompanionActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonFlowActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonCompleteUnknown">
@@ -712,7 +712,7 @@
             <Property name="text" type="java.lang.String" value="GET TICKETS"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCompleteUnknownActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonFlowActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="Home24">
@@ -749,6 +749,9 @@
               <Image iconType="3" name="/Images/flow.jpg"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelFlowPicMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelMoanaPic">
           <Properties>
@@ -756,6 +759,9 @@
               <Image iconType="3" name="/Images/moana.jpg"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelFlowPicMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="Home20">
           <Properties>
@@ -774,20 +780,29 @@
               <Image iconType="3" name="/Images/dead thing.jpg"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelFlowPicMouseClicked"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelTheGeorgePic">
+        <Component class="javax.swing.JLabel" name="jLabelTheGorgePic">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Images/the gorge.jpg"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelFlowPicMouseClicked"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelChampionic">
+        <Component class="javax.swing.JLabel" name="jLabelCompanionPic">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Images/companion.jpg"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelFlowPicMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="Home21">
           <Properties>
@@ -806,6 +821,9 @@
               <Image iconType="3" name="/Images/unknonw.jpg"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelFlowPicMouseClicked"/>
+          </Events>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel1">
           <Properties>

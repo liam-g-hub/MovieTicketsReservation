@@ -1,3 +1,7 @@
+
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -15,6 +19,7 @@ public class MoviesPage extends javax.swing.JFrame {
      */
     public MoviesPage() {
         initComponents();
+        setTitle("Movie Page");
     }
 
     /**
@@ -65,8 +70,8 @@ public class MoviesPage extends javax.swing.JFrame {
         jLabelMoanaPic = new javax.swing.JLabel();
         Home20 = new javax.swing.JLabel();
         jLabelTheDeadThingPic = new javax.swing.JLabel();
-        jLabelTheGeorgePic = new javax.swing.JLabel();
-        jLabelChampionic = new javax.swing.JLabel();
+        jLabelTheGorgePic = new javax.swing.JLabel();
+        jLabelCompanionPic = new javax.swing.JLabel();
         Home21 = new javax.swing.JLabel();
         jLabelCompleteUnknownPic = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -215,7 +220,7 @@ public class MoviesPage extends javax.swing.JFrame {
         jButtonGorge.setText("GET TICKETS");
         jButtonGorge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonGorgeActionPerformed(evt);
+                jButtonFlowActionPerformed(evt);
             }
         });
 
@@ -225,7 +230,7 @@ public class MoviesPage extends javax.swing.JFrame {
         jButtonDeadThing.setText("GET TICKETS");
         jButtonDeadThing.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDeadThingActionPerformed(evt);
+                jButtonFlowActionPerformed(evt);
             }
         });
 
@@ -249,7 +254,7 @@ public class MoviesPage extends javax.swing.JFrame {
         jButtonMoana.setText("GET TICKETS");
         jButtonMoana.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMoanaActionPerformed(evt);
+                jButtonFlowActionPerformed(evt);
             }
         });
 
@@ -289,7 +294,7 @@ public class MoviesPage extends javax.swing.JFrame {
         jButtonCompanion.setText("GET TICKETS");
         jButtonCompanion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCompanionActionPerformed(evt);
+                jButtonFlowActionPerformed(evt);
             }
         });
 
@@ -299,7 +304,7 @@ public class MoviesPage extends javax.swing.JFrame {
         jButtonCompleteUnknown.setText("GET TICKETS");
         jButtonCompleteUnknown.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCompleteUnknownActionPerformed(evt);
+                jButtonFlowActionPerformed(evt);
             }
         });
 
@@ -314,24 +319,54 @@ public class MoviesPage extends javax.swing.JFrame {
         Home25.setText("3:00 PM 6:00 PM");
 
         jLabelFlowPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/flow.jpg"))); // NOI18N
+        jLabelFlowPic.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelFlowPicMouseClicked(evt);
+            }
+        });
 
         jLabelMoanaPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/moana.jpg"))); // NOI18N
+        jLabelMoanaPic.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelFlowPicMouseClicked(evt);
+            }
+        });
 
         Home20.setBackground(new java.awt.Color(255, 255, 255));
         Home20.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         Home20.setText("MARCH 12, 2025");
 
         jLabelTheDeadThingPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/dead thing.jpg"))); // NOI18N
+        jLabelTheDeadThingPic.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelFlowPicMouseClicked(evt);
+            }
+        });
 
-        jLabelTheGeorgePic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/the gorge.jpg"))); // NOI18N
+        jLabelTheGorgePic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/the gorge.jpg"))); // NOI18N
+        jLabelTheGorgePic.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelFlowPicMouseClicked(evt);
+            }
+        });
 
-        jLabelChampionic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/companion.jpg"))); // NOI18N
+        jLabelCompanionPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/companion.jpg"))); // NOI18N
+        jLabelCompanionPic.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelFlowPicMouseClicked(evt);
+            }
+        });
 
         Home21.setBackground(new java.awt.Color(255, 255, 255));
         Home21.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         Home21.setText("MARCH 12, 2025");
 
         jLabelCompleteUnknownPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/unknonw.jpg"))); // NOI18N
+        jLabelCompleteUnknownPic.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelFlowPicMouseClicked(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(175, 52, 59));
 
@@ -376,7 +411,7 @@ public class MoviesPage extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(CenterLayout.createSequentialGroup()
-                        .addComponent(jLabelTheGeorgePic)
+                        .addComponent(jLabelTheGorgePic)
                         .addGap(18, 18, 18)
                         .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelGorge2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -386,7 +421,7 @@ public class MoviesPage extends javax.swing.JFrame {
                             .addComponent(Home15, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(CenterLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(jLabelChampionic)
+                        .addComponent(jLabelCompanionPic)
                         .addGap(18, 18, 18)
                         .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelTheCompanion1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -433,7 +468,7 @@ public class MoviesPage extends javax.swing.JFrame {
                         .addComponent(jButtonGorge)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Home15))
-                    .addComponent(jLabelTheGeorgePic)
+                    .addComponent(jLabelTheGorgePic)
                     .addGroup(CenterLayout.createSequentialGroup()
                         .addComponent(jLabelDeadThing1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -458,7 +493,7 @@ public class MoviesPage extends javax.swing.JFrame {
                     .addComponent(jLabelFlowPic))
                 .addGap(72, 72, 72)
                 .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelChampionic)
+                    .addComponent(jLabelCompanionPic)
                     .addGroup(CenterLayout.createSequentialGroup()
                         .addComponent(jLabelTheCompanion1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -506,28 +541,12 @@ public class MoviesPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonFlowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFlowActionPerformed
-       // Flow Button CLICK ME!
+        // Any "Get ticket" button selected will go to reseravtion page
+        ReservationPage Reservation = new ReservationPage();
+        Reservation.setVisible(true);
+ 
+        this.dispose();
     }//GEN-LAST:event_jButtonFlowActionPerformed
-
-    private void jButtonGorgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGorgeActionPerformed
-         // The Gorge Button CLICK ME!
-    }//GEN-LAST:event_jButtonGorgeActionPerformed
-
-    private void jButtonDeadThingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeadThingActionPerformed
-         // The Dead Thing Button CLICK ME!
-    }//GEN-LAST:event_jButtonDeadThingActionPerformed
-
-    private void jButtonMoanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMoanaActionPerformed
-         // Moana Returns Button CLICK ME!
-    }//GEN-LAST:event_jButtonMoanaActionPerformed
-
-    private void jButtonCompanionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCompanionActionPerformed
-         // Companion Button CLICK ME!
-    }//GEN-LAST:event_jButtonCompanionActionPerformed
-
-    private void jButtonCompleteUnknownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCompleteUnknownActionPerformed
-         // Complete Unknown Button CLICK ME!
-    }//GEN-LAST:event_jButtonCompleteUnknownActionPerformed
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
        // home button from menu
@@ -548,6 +567,54 @@ public class MoviesPage extends javax.swing.JFrame {
         MoviesPage Movies = new MoviesPage();
         Movies.setVisible(true);
         this.dispose();    }//GEN-LAST:event_jButtonMoviesActionPerformed
+
+    private void jLabelFlowPicMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelFlowPicMouseClicked
+        // TODO add your handling code here:
+        JLabel clickedLabel = (JLabel) evt.getSource(); 
+        String description = "";
+
+        if (clickedLabel == jLabelFlowPic) {
+            description = "Flow: When a large flood destroys its home, a lonely cat seeks refuge on a boat full with other creatures.\n"
+                    + "To live, they have to work together despite their differences.\n"
+                    + "Genre: Adventure/Family/Animation\n"
+                    + "RunTime: 1H 25M\n"
+                    + "TV Parental Guidance: PG";
+        } else if (clickedLabel == jLabelMoanaPic) {
+            description = "Moana Returns: Moana sets off on a new quest to save her island and its people, teaming up with the demigod Maui once more.\n"
+                    + "As they face mythical creatures and unexpected challenges, Moana discovers more about her heritage and her role as a leader.\n"
+                    + "Genre: Adventure/Family/Animation\n"
+                    + "RunTime: 1H 40M\n"
+                    + "TV Parental Guidance: PG";
+        } else if (clickedLabel == jLabelTheGorgePic) {
+            description = "The Gorge: Despite their distance, two elite snipers stationed on opposite sides of a mysterious gorge become close.\n"
+                    + "They need to work together in order to survive when a danger appears from below.\n"
+                    + "Genre: Action/Horror\n"
+                    + "RunTime: 2H 7M\n"
+                    + "TV Parental Guidance: SPG";
+        } else if (clickedLabel == jLabelCompanionPic) {
+            description = "The Companion: When Iris and her friends visit a billionaire's lakeside estate for a weekend, they find themselves involved in a chain of events.\n"
+                    + "Genre: Horror/Sci-Fi\n"
+                    + "RunTime: 1H 37M\n"
+                    + "TV Parental Guidance: SPG";
+        } else if (clickedLabel == jLabelTheDeadThingPic) {
+            description = "The Dead Thing: A young woman falls in love with a charming man after feeling empty from casual encounters. \n"
+                    + "However, his dark secret change their passion into a dangerous obsession.\n"
+                    + "Genre: Horror/Erotic\n"
+                    + "RunTime: 1H 34M\n"
+                    + "TV Parental Guidance: SPG";
+        } else if (clickedLabel == jLabelCompleteUnknownPic) {
+            description = "The Complete Unknown: A 19-year-old Bob Dylan arrives in New York in the early 1960s with the intention of revolutionizing American music. \n"
+                    + "As he rises to fame, he grows tired of folk scene and makes a bold, surprising choice.\n"
+                    + "Genre: Music/Drama\n"
+                    + "RunTime: 2H 20M\n"
+                    + "TV Parental Guidance: PG";
+        } else {
+            description = "No description available.";
+        }
+
+        JOptionPane.showMessageDialog(this, description, "Movie Description", JOptionPane.INFORMATION_MESSAGE);
+
+    }//GEN-LAST:event_jLabelFlowPicMouseClicked
 
     /**
      * @param args the command line arguments
@@ -614,7 +681,7 @@ public class MoviesPage extends javax.swing.JFrame {
     private javax.swing.JButton jButtonMovies;
     private javax.swing.JButton jButtonReservation;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabelChampionic;
+    private javax.swing.JLabel jLabelCompanionPic;
     private javax.swing.JLabel jLabelCompleteUnknownPic;
     private javax.swing.JLabel jLabelDeadThing1;
     private javax.swing.JLabel jLabelDeadThing2;
@@ -630,7 +697,7 @@ public class MoviesPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTheCompleteUnknown1;
     private javax.swing.JLabel jLabelTheCompleteUnknown2;
     private javax.swing.JLabel jLabelTheDeadThingPic;
-    private javax.swing.JLabel jLabelTheGeorgePic;
+    private javax.swing.JLabel jLabelTheGorgePic;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
