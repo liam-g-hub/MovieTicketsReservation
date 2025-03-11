@@ -1,6 +1,7 @@
 
 import java.text.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 import javax.swing.*;
 
 /*
@@ -618,9 +619,9 @@ public class ReservationPage extends javax.swing.JFrame {
             panel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Home9, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Home9, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelTotalBill, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelTotalBill, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel6Layout.setVerticalGroup(
@@ -773,6 +774,13 @@ public class ReservationPage extends javax.swing.JFrame {
 
     private void jButtonConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfirmActionPerformed
         // TODO add your handling code here:
+        SeatPage Seat = new SeatPage();
+        Seat.setTicketNum(ticketNum); 
+
+       
+        Seat.setVisible(true);
+        this.dispose();
+
     }//GEN-LAST:event_jButtonConfirmActionPerformed
 
     private void resetReservation() {

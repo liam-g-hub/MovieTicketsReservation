@@ -1,6 +1,7 @@
 
 import java.awt.Color;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 /*
@@ -13,6 +14,8 @@ import javax.swing.UIManager;
  * @author Julianna Boado
  */
 public class SeatPage extends javax.swing.JFrame {
+    int selectedSeats = 0; // Counter for selected seats
+    int ticketNum; // Number of tickets purchased
 
     /**
      * Creates new form SeatPage
@@ -20,7 +23,16 @@ public class SeatPage extends javax.swing.JFrame {
     public SeatPage() {
         initComponents();
         setTitle("Seat Page");
+        this.ticketNum = ticketNum;
+
     }
+    
+    public void setTicketNum(int ticketNum) {
+        this.ticketNum = ticketNum;
+    }
+    
+           
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -1815,23 +1827,50 @@ public class SeatPage extends javax.swing.JFrame {
 
     private void ConfirmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmBtnActionPerformed
         // TODO add your handling code here:
+        if (selectedSeats != ticketNum) {
+            JOptionPane.showMessageDialog(this, "You only selected " +selectedSeats + " seat/s but reserved " + ticketNum + " ticket/s.", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        int confirmChoice = JOptionPane.showConfirmDialog(this, "Are you sure you are done with ticket and seat reservation?", "Confirmation", JOptionPane.YES_NO_OPTION);
+
+        if (confirmChoice == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(this, "Reservation Successful! Thank you for reserving your tickets at MetroCine. Check your email for confirmation and details.");
+            System.exit(0);
+        }
     }//GEN-LAST:event_ConfirmBtnActionPerformed
 
     private void CancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelBtnActionPerformed
-        ReservationPage Reservation = new ReservationPage();
-        Reservation.setVisible(true);
-        this.dispose();
+
+        int cancelConfirm = JOptionPane.showConfirmDialog(this, "Cancel seat reservation?", "Confirmation", JOptionPane.YES_NO_OPTION);
+
+        if (cancelConfirm == JOptionPane.YES_OPTION) {
+            int goBack = JOptionPane.showConfirmDialog(this, "Do you want to go back to the ticket reservation page?", "Go Back", JOptionPane.YES_NO_OPTION);
+
+            if (goBack == JOptionPane.YES_OPTION) {
+                ReservationPage reservation = new ReservationPage();
+                reservation.setVisible(true);
+                this.dispose();
+            }
+    }
     }//GEN-LAST:event_CancelBtnActionPerformed
 
     private void SeatCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SeatCheckActionPerformed
         JButton clickedButton = (JButton) evt.getSource(); // Cast getsource to jbutton bc getsource() = object
             if (clickedButton.getBackground().equals(new java.awt.Color(255,212,160))) {
                 clickedButton.setBackground((Color) UIManager.get("Button.background")); // Return - >default
+                selectedSeats--;
             } else {
+                // The user can only select a seat depedning on the no. of tickets they reserve
+                if (selectedSeats >= ticketNum) {
+                    JOptionPane.showMessageDialog(this, "You only reserved " + ticketNum + " ticket/s.");
+                    return;
+                }
+ 
                 clickedButton.setBackground(new java.awt.Color(255,212,160)); // Selecting -> beige
-                
+                selectedSeats++;
                 //add boolean here for confirm? and count for total seats if ever
-            }
+           } 
     }//GEN-LAST:event_SeatCheckActionPerformed
 
     private void SeatMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SeatMouseEntered
