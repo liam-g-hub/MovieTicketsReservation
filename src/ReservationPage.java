@@ -774,10 +774,24 @@ public class ReservationPage extends javax.swing.JFrame {
 
     private void jButtonConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfirmActionPerformed
         // TODO add your handling code here:
+        
+        //movie and available time slot must be selected. PLUS personal info part must be filled in before going to the seat page
+        if (MovieSelectComboBox.getSelectedIndex() == 0){
+            JOptionPane.showMessageDialog(this, "Must choose a movie", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+            } else if (!Time10Button.isSelected() && !Time12Button.isSelected() && !Time3Button.isSelected() && !Time6Button.isSelected()) {
+                JOptionPane.showMessageDialog(this, "Must select available time slot of the chosen movie", "Warning", JOptionPane.WARNING_MESSAGE);
+                return;
+            } else if (jTextFieldName.getText().trim().isEmpty() || jTextFieldEmail.getText().trim().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Must fill in your name and email for confirmation", "Warning", JOptionPane.WARNING_MESSAGE);
+                return; 
+                } else if (!jTextFieldEmail.getText().trim().contains("@") || !jTextFieldEmail.getText().trim().endsWith(".com")) {
+                    JOptionPane.showMessageDialog(this, "Invalid email format. Please enter a valid email (MetroCine@gmail.com)", "Warning", JOptionPane.WARNING_MESSAGE);
+                    return;
+                }  
+        
         SeatPage Seat = new SeatPage();
         Seat.setTicketNum(ticketNum); 
-
-       
         Seat.setVisible(true);
         this.dispose();
 
