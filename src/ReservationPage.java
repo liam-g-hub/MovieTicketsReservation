@@ -438,6 +438,11 @@ public class ReservationPage extends javax.swing.JFrame {
         jTextFieldSnackTotal.setForeground(new java.awt.Color(175, 52, 59));
         jTextFieldSnackTotal.setDisabledTextColor(new java.awt.Color(175, 52, 59));
         jTextFieldSnackTotal.setEnabled(false);
+        jTextFieldSnackTotal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldSnackTotalActionPerformed(evt);
+            }
+        });
 
         OGPopSpinner.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         OGPopSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
@@ -650,6 +655,7 @@ public class ReservationPage extends javax.swing.JFrame {
 
         MovieSelectComboBox.setBackground(new java.awt.Color(242, 198, 112));
         MovieSelectComboBox.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        MovieSelectComboBox.setForeground(new java.awt.Color(175, 52, 59));
         MovieSelectComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Select a Movie and Time", "Flow (March, 12)", "The Gorge (March, 12)", "The Dead Thing (March, 12)", "Moana Returns (March, 12)", "The Companion (March, 12)", "The Complete Unknown (March, 12)" }));
         MovieSelectComboBox.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -667,13 +673,14 @@ public class ReservationPage extends javax.swing.JFrame {
                     .addGroup(CenterLayout.createSequentialGroup()
                         .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(CenterLayout.createSequentialGroup()
-                                .addComponent(Time10Button, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(Time12Button, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Time3Button, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(Time6Button, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(6, 6, 6)
+                                .addComponent(Time10Button, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(Time12Button, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(Time3Button, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(Time6Button, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(panel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(panel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(MovieSelectComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -717,7 +724,7 @@ public class ReservationPage extends javax.swing.JFrame {
                         .addGroup(CenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButtonConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         getContentPane().add(Center, java.awt.BorderLayout.CENTER);
@@ -768,8 +775,61 @@ public class ReservationPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonConfirmActionPerformed
 
+    private void resetReservation() {
+        ticketNum = 1;
+        jLabelTicketQuantity.setText("1");
+        jLabelTicketsTotal.setText("440.00");
+
+        OGPopSpinner.setValue(0);
+        CheePopSpinner.setValue(0);
+        BBQPopSpinner.setValue(0);
+        NachoSpinner.setValue(0);
+        SodaSpinner.setValue(0);
+        WaterSpinner.setValue(0);
+        jTextFieldSnackTotal.setText("Php 0");
+
+        jLabelTotalBill.setText("Php 440.00");
+
+        jTextFieldName.setText("");
+        jTextFieldEmail.setText("");
+
+        MovieSelectComboBox.setSelectedIndex(0);
+        Time10Button.setEnabled(false);
+        Time12Button.setEnabled(false);
+        Time3Button.setEnabled(false);
+        Time6Button.setEnabled(false);
+        Time10Button.setSelected(false);
+        Time12Button.setSelected(false);
+        Time3Button.setSelected(false);
+        Time6Button.setSelected(false);
+    }
+    
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
-        // TODO add your handling code here:
+        int confirmCancel = JOptionPane.showConfirmDialog(this,
+                "Cancel reservation?",
+                "Confirm Cancellation",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.WARNING_MESSAGE);
+
+        if (confirmCancel == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(this, "Reservation Cancelled!");
+            
+            // option for user if they want to go back browsing to movies page
+            int continueBrowsing = JOptionPane.showConfirmDialog(this,
+                    "Want to continue browsing?",
+                    "Continue Browsing?",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE);
+
+            if (continueBrowsing == JOptionPane.YES_OPTION) {
+                MoviesPage movies = new MoviesPage();
+                movies.setVisible(true);
+                this.dispose();
+                resetReservation();
+            } else {
+                this.dispose();
+            }
+        }
     }//GEN-LAST:event_jButtonCancelActionPerformed
     // NAME AND EMAIL TEXTFIELD
     private void jTextFieldNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldNameKeyPressed
@@ -817,6 +877,19 @@ public class ReservationPage extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Invalid input. Only letters, @, and . are allowed.");  
         }
     }//GEN-LAST:event_jTextFieldEmailKeyPressed
+    // METHOD FOR UPDATING TOTAL BILL
+    private void updateTotalBill() {
+        try {
+            double ticketTotal = Double.parseDouble(jLabelTicketsTotal.getText());
+            double snackTotal = Double.parseDouble(jTextFieldSnackTotal.getText().replace("Php  ", "").trim());
+            double totalBill = ticketTotal + snackTotal;
+        
+            jLabelTotalBill.setText("Php " + df.format(totalBill));
+        } catch (NumberFormatException e) {
+            jLabelTotalBill.setText("Php 0.00");
+        }
+    }    
+
     // TICKET JBUTTON
     private void jButtonLessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLessActionPerformed
         if (ticketNum == 1){
@@ -829,6 +902,7 @@ public class ReservationPage extends javax.swing.JFrame {
             ticketSubtotal = ticketNum * 440;
             String ticketSubtotalString = df.format(ticketSubtotal);
             jLabelTicketsTotal.setText(ticketSubtotalString);
+            updateTotalBill(); // method for updating the total bill
         }
     }//GEN-LAST:event_jButtonLessActionPerformed
 
@@ -843,6 +917,7 @@ public class ReservationPage extends javax.swing.JFrame {
             ticketSubtotal = ticketNum * 440;
             String ticketSubtotalString = df.format(ticketSubtotal);
             jLabelTicketsTotal.setText(ticketSubtotalString);
+            updateTotalBill(); // method for updating the total bill
         }
     }//GEN-LAST:event_jButtonMoreActionPerformed
 
@@ -854,9 +929,10 @@ public class ReservationPage extends javax.swing.JFrame {
                 + (Integer) SodaSpinner.getValue() * 30 
                 + (Integer) WaterSpinner.getValue() * 25;
         
-        //can also add the + ticket here and dupe, or append to outside method
+        // can also add the + ticket here and dupe, or append to outside method
         
         jTextFieldSnackTotal.setText("Php  " + Subtotal);
+        updateTotalBill(); // method for updating the total bill
     }//GEN-LAST:event_OrderChange
 
     private void MovieSelectStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_MovieSelectStateChanged
@@ -921,6 +997,10 @@ public class ReservationPage extends javax.swing.JFrame {
                 break;
         }
     }//GEN-LAST:event_MovieSelectStateChanged
+
+    private void jTextFieldSnackTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldSnackTotalActionPerformed
+        jTextFieldSnackTotal.setEditable(false); // so user cant type on it
+    }//GEN-LAST:event_jTextFieldSnackTotalActionPerformed
     
     /**
      * @param args the command line arguments
