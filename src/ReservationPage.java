@@ -879,17 +879,20 @@ public class ReservationPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldEmailKeyPressed
     // METHOD FOR UPDATING TOTAL BILL
     private void updateTotalBill() {
-        try {
-            double ticketTotal = Double.parseDouble(jLabelTicketsTotal.getText());
-            double snackTotal = Double.parseDouble(jTextFieldSnackTotal.getText().replace("Php  ", "").trim());
+       try {
+
+            String ticketText = jLabelTicketsTotal.getText().trim();
+            double ticketTotal = ticketText.isEmpty() ? 0.0 : Double.parseDouble(ticketText);
+
+            String snackText = jTextFieldSnackTotal.getText().replace("Php", "").trim();
+            double snackTotal = snackText.isEmpty() ? 0.0 : Double.parseDouble(snackText);
+
             double totalBill = ticketTotal + snackTotal;
-        
             jLabelTotalBill.setText("Php " + df.format(totalBill));
         } catch (NumberFormatException e) {
             jLabelTotalBill.setText("Php 0.00");
         }
     }    
-
     // TICKET JBUTTON
     private void jButtonLessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLessActionPerformed
         if (ticketNum == 1){
