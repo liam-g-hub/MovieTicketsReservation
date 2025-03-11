@@ -440,6 +440,7 @@ public class ReservationPage extends javax.swing.JFrame {
         jTextFieldSnackTotal.setEnabled(false);
 
         OGPopSpinner.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        OGPopSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         OGPopSpinner.setBorder(null);
         OGPopSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -452,6 +453,7 @@ public class ReservationPage extends javax.swing.JFrame {
         jLabel1.setText("Original Popcorn (P50.00)");
 
         CheePopSpinner.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        CheePopSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         CheePopSpinner.setBorder(null);
         CheePopSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -468,6 +470,7 @@ public class ReservationPage extends javax.swing.JFrame {
         jLabel3.setText("BBQ Popcorn (P55.00)");
 
         BBQPopSpinner.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        BBQPopSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         BBQPopSpinner.setBorder(null);
         BBQPopSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -480,6 +483,7 @@ public class ReservationPage extends javax.swing.JFrame {
         jLabel4.setText("Nachos (P60.00)");
 
         NachoSpinner.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        NachoSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         NachoSpinner.setBorder(null);
         NachoSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -488,6 +492,8 @@ public class ReservationPage extends javax.swing.JFrame {
         });
 
         SodaSpinner.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        SodaSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        SodaSpinner.setToolTipText("");
         SodaSpinner.setBorder(null);
         SodaSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -500,6 +506,8 @@ public class ReservationPage extends javax.swing.JFrame {
         jLabel5.setText("Soda (P30.00)");
 
         WaterSpinner.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        WaterSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        WaterSpinner.setToolTipText("");
         WaterSpinner.setBorder(null);
         WaterSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
