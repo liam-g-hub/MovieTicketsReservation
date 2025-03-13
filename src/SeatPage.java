@@ -453,6 +453,8 @@ public class SeatPage extends javax.swing.JFrame {
             }
         });
 
+        A10.setBackground(new java.awt.Color(153, 153, 153));
+        A10.setEnabled(false);
         A10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 SeatMouseEntered(evt);
@@ -467,6 +469,8 @@ public class SeatPage extends javax.swing.JFrame {
             }
         });
 
+        A9.setBackground(new java.awt.Color(153, 153, 153));
+        A9.setEnabled(false);
         A9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 SeatMouseEntered(evt);
@@ -551,6 +555,8 @@ public class SeatPage extends javax.swing.JFrame {
             }
         });
 
+        B11.setBackground(new java.awt.Color(153, 153, 153));
+        B11.setEnabled(false);
         B11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 SeatMouseEntered(evt);
@@ -565,6 +571,8 @@ public class SeatPage extends javax.swing.JFrame {
             }
         });
 
+        B10.setBackground(new java.awt.Color(153, 153, 153));
+        B10.setEnabled(false);
         B10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 SeatMouseEntered(evt);
@@ -579,6 +587,9 @@ public class SeatPage extends javax.swing.JFrame {
             }
         });
 
+        B9.setBackground(new java.awt.Color(153, 153, 153));
+        B9.setToolTipText("");
+        B9.setEnabled(false);
         B9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 SeatMouseEntered(evt);
@@ -929,6 +940,8 @@ public class SeatPage extends javax.swing.JFrame {
             }
         });
 
+        D15.setBackground(new java.awt.Color(153, 153, 153));
+        D15.setEnabled(false);
         D15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 SeatMouseEntered(evt);
@@ -1027,6 +1040,8 @@ public class SeatPage extends javax.swing.JFrame {
             }
         });
 
+        D13.setBackground(new java.awt.Color(153, 153, 153));
+        D13.setEnabled(false);
         D13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 SeatMouseEntered(evt);
@@ -1083,6 +1098,8 @@ public class SeatPage extends javax.swing.JFrame {
             }
         });
 
+        D14.setBackground(new java.awt.Color(153, 153, 153));
+        D14.setEnabled(false);
         D14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 SeatMouseEntered(evt);
@@ -1111,14 +1128,8 @@ public class SeatPage extends javax.swing.JFrame {
             }
         });
 
-        D16.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                SeatMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                SeatMouseExited(evt);
-            }
-        });
+        D16.setBackground(new java.awt.Color(153, 153, 153));
+        D16.setEnabled(false);
         D16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SeatCheckActionPerformed(evt);
@@ -1139,6 +1150,8 @@ public class SeatPage extends javax.swing.JFrame {
             }
         });
 
+        D12.setBackground(new java.awt.Color(153, 153, 153));
+        D12.setEnabled(false);
         D12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 SeatMouseEntered(evt);
@@ -1533,7 +1546,7 @@ public class SeatPage extends javax.swing.JFrame {
                                 .addComponent(A7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(A8, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(42, 42, 42)
+                        .addGap(30, 30, 30)
                         .addGroup(Center_SeatPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(Center_SeatPageLayout.createSequentialGroup()
                                 .addComponent(E9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1622,7 +1635,7 @@ public class SeatPage extends javax.swing.JFrame {
                             .addComponent(jLabel13)
                             .addComponent(jLabel14)
                             .addComponent(jLabel15))
-                        .addContainerGap(26, Short.MAX_VALUE))
+                        .addContainerGap(38, Short.MAX_VALUE))
                     .addGroup(Center_SeatPageLayout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(49, 49, 49))))
@@ -1643,7 +1656,7 @@ public class SeatPage extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(12, 12, 12)
                 .addComponent(jLabel2)
-                .addGap(30, 30, 30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(Center_SeatPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jButton86, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1771,7 +1784,7 @@ public class SeatPage extends javax.swing.JFrame {
                                 .addComponent(E9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(E15, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         getContentPane().add(Center_SeatPage, java.awt.BorderLayout.CENTER);
